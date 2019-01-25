@@ -1,0 +1,160 @@
+/* Image de fond du site */
+body {
+    background-image: url(image/fondcarreaux.jpeg);
+}
+/***************************************************************************/
+/****/
+/* Police d'écriture du site */
+/****/
+@font-face {
+    font-family: 'FredokaOne';
+    src: url('police/FredokaOne-Regular.ttf');
+}
+body {
+    font-family: 'FredokaOne';
+}
+h1 {
+    font-family: 'FredokaOne';
+}
+h2 {
+    font-family: 'FredokaOne';
+}
+h3 {
+    font-family: 'FredokaOne';
+}
+h4 {
+    font-family: 'FredokaOne';
+}
+h5 {
+    font-family: 'FredokaOne';
+}
+h6 {
+    font-family: 'FredokaOne';
+}
+/*********************************************************************************/
+/****/
+/* Header du site */
+/****/
+.jumbotron {
+    border-radius: 0rem;
+}
+.header {
+    background-image: url(image/top_bg1.png);
+    background-color: black;
+    background-size: 100% 100%;
+    margin-bottom: 0;
+}
+/*********************************************************************************/
+/****/
+/* Barre de navigation */
+/****/
+a:hover {
+    text-decoration: none;
+}
+.nav-linkactive {
+    color: #DCDCDC;
+    display: block;
+    padding: .5rem 1rem;
+    text-decoration: none;
+    padding-right: .5rem;
+    padding-left: .5rem;
+}
+a.nav-linkactive:hover {
+    color: #C0C0C0;
+}
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 6;
+}
+
+/*********************************************************************************/
+/****/
+/* Colonne pour article */
+/****/
+.row {
+    color: black;
+    position: static;
+}
+
+/*********************************************************************************/
+/****/
+/* Article 1 */
+/****/
+.container {
+    margin-top: 30px;
+}
+.article {
+    background-image: url(image/PageViergeCOC.png);
+    background-size: 100% 100%;
+    background-color: none;
+    padding: 3rem;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 2rem;
+    position: static;
+}
+.policemoyen {
+    font-size: 1.5rem;
+}
+
+/*********************************************************************************/
+/****/
+/* Footer */
+/****/
+.footer {
+    background-color: black;
+    color: white;
+    margin-bottom: 0;
+    text-align: center;
+	padding: 1rem 2rem;
+}
+.footer p {
+	margin-bottom: 0;
+}
+
+/*********************************************************************************/
+/****/
+/* Autres classes */
+/****/
+.fond {
+    background-image: url(image/fondbois3.png);
+	background-size: 30% 50%;
+	background-repeat: repeat;
+}
+.fondpapyrus {
+    background-image: url(image/background_menu_option4.png);
+    background-size: 100% 100%;
+    background-color: none;
+}
+.fondpapyrus2 {
+    background-image: url(image/PageViergeCOC.png);
+    background-size: 100% 100%;
+    background-color: none;
+}
+
+/*********************************************************************************/
+/****/
+/* Media queries pour la responsive */
+/****/
+@media screen and (max-width: 575px)  {
+    .article {margin: 1rem;}
+}
+
+@media screen and (max-width: 1199px) {
+    .image {display: none;}
+}
+@media screen and (max-width: 400px) {
+    .w3-animate-zoom {animation: none;}
+}
+
+
+
+
+
+
+
+
+
+
+

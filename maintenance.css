@@ -1,0 +1,126 @@
+/* Image de fond du site */
+body {
+    background-image: url(image/fondcarreaux.jpeg);
+}
+/***************************************************************************/
+/****/
+/* Police d'écriture du site */
+/****/
+@font-face {
+    font-family: 'FredokaOne';
+    src: url('police/FredokaOne-Regular.ttf');
+}
+body {
+    font-family: 'FredokaOne';
+}
+h1 {
+    font-family: 'FredokaOne';
+}
+h2 {
+    font-family: 'FredokaOne';
+}
+h3 {
+    font-family: 'FredokaOne';
+}
+h4 {
+    font-family: 'FredokaOne';
+}
+h5 {
+    font-family: 'FredokaOne';
+}
+h6 {
+    font-family: 'FredokaOne';
+}
+/*********************************************************************************/
+/****/
+/* Header du site */
+/****/
+.header {
+    background-image: url(image/top_bg.png);
+    background-size: 100% 100%;
+    background-color: black;
+}
+.jumbotron {
+    border-radius: 0rem;
+}
+/**********************************************************************************/
+/****/
+/* Colonne */
+/****/
+.row {
+    color: black;
+    position: static;
+}
+/**********************************************************************************/
+/****/
+/* Première Article */
+/****/
+.article1 {
+    padding: 2rem;
+    margin-bottom: 2rem;
+    margin-right: 2rem;
+    border-radius: 2rem;
+    position: static;
+    background-image: url(image/PageViergeCOC.png);
+    background-size: 100% 100%;
+    background-color: none;
+}
+/**********************************************************************************/
+/****/
+/* Footer de la page */
+/****/
+.footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding-left: auto;
+    padding-right: auto;
+    padding-top: auto;
+    padding-bottom: auto;
+}
+.footer p {
+	margin-bottom: 0;
+}
+
+/**********************************************************************************/
+/****/
+/* Autres classes */
+/****/
+a:hover {
+    text-decoration: none;
+}
+.fond {
+    background-image: url(image/fondbois3.png);
+	background-size: 30% 50%;
+	background-repeat: repeat;
+}
+.fondpapyrus {
+    background-image: url(image/background_menu_option4.png);
+    background-size: 100% 100%;
+    background-color: none;
+}
+.w3-animate-right {
+    position: initial;
+}
+
+@media screen and (max-width: 884px)  {
+    .article1 {margin: 2rem;}
+}
+
+@media screen and (max-width: 1199px) {
+    .test {display: none;}
+}
+@media screen and (max-width: 400px) {
+    .w3-animate-zoom {animation: none;}
+}
+
+
+
+
+
+
+
+
+
+
+

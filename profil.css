@@ -1,0 +1,305 @@
+/* Image de fond du site */
+body {
+    background-image: url(image/fondcarreaux.jpeg);
+}
+/***************************************************************************/
+/****/
+/* Police d'écriture du site */
+/****/
+@font-face {
+    font-family: 'FredokaOne';
+    src: url('police/FredokaOne-Regular.ttf');
+}
+body {
+    font-family: 'FredokaOne';
+}
+h1 {
+    font-family: 'FredokaOne';
+}
+h2 {
+    font-family: 'FredokaOne';
+}
+h3 {
+    font-family: 'FredokaOne';
+}
+h4 {
+    font-family: 'FredokaOne';
+}
+h5 {
+    font-family: 'FredokaOne';
+}
+h6 {
+    font-family: 'FredokaOne';
+}
+/*********************************************************************************/
+/****/
+/* Header du site */
+/****/
+.jumbotron {
+    border-radius: 0rem;
+}
+.header {
+    background-image: url(image/top_bg1.png);
+    background-color: black;
+    background-size: 100% 100%;
+    margin-bottom: 0;
+}
+
+/*********************************************************************************/
+/****/
+/* Barre de navigation */
+/****/
+a:hover {
+    text-decoration: none;
+}
+.nav-linkactive {
+    color: #DCDCDC;
+    display: block;
+    padding: .5rem 1rem;
+    text-decoration: none;
+    padding-right: .5rem;
+    padding-left: .5rem;
+}
+a.nav-linkactive:hover {
+    color: #C0C0C0;
+}
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 6;
+}
+
+/*********************************************************************************/
+/****/
+/* Colonne pour article */
+/****/
+.row {
+    color: black;
+    position: static;
+}
+
+/*********************************************************************************/
+/****/
+/* Article joueur info */
+/****/
+.containerlarge {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 30px;
+}
+.article {
+    background-color: white;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 2rem;
+    background-image: url(image/fondbois3.png);
+	background-size: 30% 50%;
+	background-repeat: repeat;
+}
+.pasDeMarge {
+	margin: 0;
+}
+.flexLevelAndTrophees {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	align-items: center;
+	margin-bottom: 4rem;
+}
+.levelJoueur {
+	width: 3%;
+	margin: 0;
+}
+.imageTropheesActuel {
+	max-width: 55px;
+}
+.tropheesActuel {
+	margin: 0;
+}
+.EnTeteProfil {
+	margin: 2rem;
+	margin-left: 4rem;
+}
+.Stats {
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+	margin: 2rem;
+}
+.Statistiques {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	align-items: flex-start;
+	margin: 2rem;
+}
+.TitreStatistiques {
+	margin-bottom: 3rem;
+}
+
+
+/*********************************************************************************/
+/****/
+/* Article joueur coffres */
+/****/
+.containerlargeclan {
+    width: 90vw;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 30px;
+}
+.articleclan {
+    background-color: white;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 2rem;
+    position: static;
+    background-image: url(image/fondbois3.png);
+	background-size: 30% 50%;
+	background-repeat: repeat;
+}
+.coffres {
+	max-width: 5rem;
+	height: auto;
+}
+.cartes {
+	max-width: 7rem;
+	height: auto;
+}
+.flexCoffres {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	align-items: center;
+	padding: 2rem;
+}
+.flexCartes {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 2rem;
+}
+.spaceBetween {
+	margin: 1vw;
+}
+.w3-card {
+	background-color: black;
+	border-radius: 0.6rem;
+	height: 1.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.nombreCartes {
+	text-align: center;
+	text-shadow: 0px 0px 2px black;
+	min-width: 95%;
+	border-radius: 2rem;
+    position: absolute;
+    color: white;
+}
+
+div.numerotationCoffres p {
+	padding-right: 15px;
+	margin-bottom: 0.2rem;
+	text-shadow: -2px -1px 6px black;
+	font-size: 0.8rem;
+}
+.w3-display-bottommiddle {
+	font-size: 0.8rem;
+	width: 100%;
+	margin-bottom: 24%;
+	text-align: center;
+	padding: 0;
+}
+.w3-display-bottommiddle p {
+	text-shadow: 1px -1px 6px black;
+}
+.couleurFondBarre {
+	position: relative;
+	width: 95%;
+	height: 80%;
+	border-radius: 1rem;
+	background-color: black;
+}
+.progression {
+	height: 100%;
+	border-radius: 2rem;
+	background: linear-gradient(180deg,dodgerblue 49%,#006ec9 50%,#006ec9 0);
+}
+.niveauSupPossible {
+	height: 100%;
+	border-radius: 2rem;
+	background: linear-gradient(180deg,#24d804 49%,#19aa02 50%,#19aa02 0);
+}
+.niveauMaxed {
+	height: 100%;
+	border-radius: 2rem;
+	background: linear-gradient(180deg,#FF6347 49%,#FF4500 50%,#FF4500 0);
+}
+p.sansMarge {
+	margin: 0;
+	font-size: 0.8rem;
+	position: relative;
+	z-index: 1;
+}
+.w3-grayscale-max {
+	margin-bottom: 1.5rem
+}
+
+/*********************************************************************************/
+/****/
+/* Footer */
+/****/
+.footer {
+    background-color: black;
+    color: white;
+    margin-bottom: 0;
+    text-align: center;
+	padding: 1rem 2rem;
+}
+.footer p {
+	margin-bottom: 0;
+}
+
+/*********************************************************************************/
+/****/
+/* Autres classes */
+/****/
+.fond {
+    background-image: url(image/fondbois3.png);
+	background-size: 30% 50%;
+	background-repeat: repeat;
+}
+.fondpapyrus {
+    background-image: url(image/background_menu_option4.png);
+    background-size: 100% 100%;
+    background-color: none;
+}
+
+/*********************************************************************************/
+/****/
+/* Media queries pour la responsive */
+/****/
+@media screen and (max-width: 575px)  {
+    .article {margin-left: auto; margin-right: auto; width: 90%;}
+}
+
+@media screen and (max-width: 1199px) {
+    .test {display: none;}
+    .containerlarge {max-width: 90vw;}
+}
+@media screen and (max-width: 400px) {
+    .w3-animate-zoom {animation: none;}
+}
+@media screen and (max-width: 100vw) and (min-width: 1199px) {
+    .containerlarge {max-width: 97vw;}
+}
+
+
