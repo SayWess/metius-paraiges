@@ -1,5 +1,12 @@
  
 <?php 
+
+$secrets = file_get_contents("secrets.json");
+$secrets = json_decode($secrets, true);
+$token = $secrets['APIkey'];
+
+
+
 //
 //Modification du fichier .htaccess pour mise en maintenance du site
 //
@@ -74,7 +81,6 @@ if(!is_dir($dossier)){
    mkdir($dossier, 0777,true);
 };
 
-$token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjE4NiwiaWRlbiI6IjQ4MTQ5ODM0NDU4MjE1MjIwNiIsIm1kIjp7InVzZXJuYW1lIjoiU2F5V2VzcyIsImtleVZlcnNpb24iOjMsImRpc2NyaW1pbmF0b3IiOiI5NTczIn0sInRzIjoxNTQ2NjMwNDgzNTcyfQ.N4WAhAuHG5Xbrl5j4f2YQLGJHWvdR1h13E3nsXWlbkk";
 $opts = [
     "http" => [
         "header" => "auth:" . $token
@@ -159,8 +165,17 @@ function newWarriorsAndOldWarriors() {
 	foreach($copyClanMembers as $value) {
 		//Si le membre n'est pas dans le tableau clanMembersActuel (Le nouveau fichier clan)
 		if (!in_array($copyClanMembers[$i], $clanMembersActuel)) {
-			//On l'ajoute au tableau oldWarriors... Même principe que pour les newWarriors
-			$oldWarriors[date('W\/y')][] = $copyClanMembers[$i];
+			foreach( $OLDWarriors as $dateIndex => $date) {
+				foreach( $date as $dateKey => $tags ) {
+					foreach( $tags as $tagIndex => $tag ) {
+						if ($copyClanMembers[$i] == $tag) {
+						unset( $OLDWarriors[$dateIndex][$dateKey][$tagIndex] );
+						}
+						//echo "$tagIndex: $tag \n";
+					}
+				}
+			}
+			$oldWarriors[date('W|y')][] = $copyClanMembers[$i];
 		}
 		$i++;
 	}
@@ -190,7 +205,6 @@ if(!is_dir($dossier)){
 $infocoded = file_get_contents("JSON/clan.json");
 $infodecoded = json_decode($infocoded);
 
-$token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjE4NiwiaWRlbiI6IjQ4MTQ5ODM0NDU4MjE1MjIwNiIsIm1kIjp7InVzZXJuYW1lIjoiU2F5V2VzcyIsImtleVZlcnNpb24iOjMsImRpc2NyaW1pbmF0b3IiOiI5NTczIn0sInRzIjoxNTQ2NjMwNDgzNTcyfQ.N4WAhAuHG5Xbrl5j4f2YQLGJHWvdR1h13E3nsXWlbkk";
 $opts = [
     "http" => [
         "header" => "auth:" . $token
@@ -221,7 +235,6 @@ if(!is_dir($dossier)){
 $infocoded = file_get_contents("JSON/clan.json");
 $infodecoded = json_decode($infocoded);
 
-$token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjE4NiwiaWRlbiI6IjQ4MTQ5ODM0NDU4MjE1MjIwNiIsIm1kIjp7InVzZXJuYW1lIjoiU2F5V2VzcyIsImtleVZlcnNpb24iOjMsImRpc2NyaW1pbmF0b3IiOiI5NTczIn0sInRzIjoxNTQ2NjMwNDgzNTcyfQ.N4WAhAuHG5Xbrl5j4f2YQLGJHWvdR1h13E3nsXWlbkk";
 $opts = [
     "http" => [
         "header" => "auth:" . $token
@@ -244,7 +257,6 @@ echo "Fin du téléchargement des données des futurs coffres des joueurs : ".da
 //Téléchargement des données de clan battle
 //
 
-$token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjE4NiwiaWRlbiI6IjQ4MTQ5ODM0NDU4MjE1MjIwNiIsIm1kIjp7InVzZXJuYW1lIjoiU2F5V2VzcyIsImtleVZlcnNpb24iOjMsImRpc2NyaW1pbmF0b3IiOiI5NTczIn0sInRzIjoxNTQ2NjMwNDgzNTcyfQ.N4WAhAuHG5Xbrl5j4f2YQLGJHWvdR1h13E3nsXWlbkk";
 $opts = [
     "http" => [
         "header" => "auth:" . $token
@@ -266,7 +278,6 @@ echo "Fin du téléchargement des données de clan battle : ".date('l jS \of F Y
 //Téléchargement des données de clan war
 //
 
-$token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjE4NiwiaWRlbiI6IjQ4MTQ5ODM0NDU4MjE1MjIwNiIsIm1kIjp7InVzZXJuYW1lIjoiU2F5V2VzcyIsImtleVZlcnNpb24iOjMsImRpc2NyaW1pbmF0b3IiOiI5NTczIn0sInRzIjoxNTQ2NjMwNDgzNTcyfQ.N4WAhAuHG5Xbrl5j4f2YQLGJHWvdR1h13E3nsXWlbkk";
 $opts = [
     "http" => [
         "header" => "auth:" . $token
@@ -287,7 +298,6 @@ echo "Fin du téléchargement des données de clan war : ".date('l jS \of F Y h:
 //Téléchargement des données clan warlog
 //
 
-$token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjE4NiwiaWRlbiI6IjQ4MTQ5ODM0NDU4MjE1MjIwNiIsIm1kIjp7InVzZXJuYW1lIjoiU2F5V2VzcyIsImtleVZlcnNpb24iOjMsImRpc2NyaW1pbmF0b3IiOiI5NTczIn0sInRzIjoxNTQ2NjMwNDgzNTcyfQ.N4WAhAuHG5Xbrl5j4f2YQLGJHWvdR1h13E3nsXWlbkk";
 $opts = [
     "http" => [
         "header" => "auth:" . $token
@@ -311,7 +321,6 @@ if(!is_dir($dossier)){
    mkdir($dossier, 0777,true);
 };
 
-$token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjE4NiwiaWRlbiI6IjQ4MTQ5ODM0NDU4MjE1MjIwNiIsIm1kIjp7InVzZXJuYW1lIjoiU2F5V2VzcyIsImtleVZlcnNpb24iOjMsImRpc2NyaW1pbmF0b3IiOiI5NTczIn0sInRzIjoxNTQ2NjMwNDgzNTcyfQ.N4WAhAuHG5Xbrl5j4f2YQLGJHWvdR1h13E3nsXWlbkk";
 $opts = [
     "http" => [
         "header" => "auth:" . $token
@@ -335,7 +344,6 @@ if(!is_dir($dossier)){
    mkdir($dossier, 0777,true);
 };
 
-$token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjE4NiwiaWRlbiI6IjQ4MTQ5ODM0NDU4MjE1MjIwNiIsIm1kIjp7InVzZXJuYW1lIjoiU2F5V2VzcyIsImtleVZlcnNpb24iOjMsImRpc2NyaW1pbmF0b3IiOiI5NTczIn0sInRzIjoxNTQ2NjMwNDgzNTcyfQ.N4WAhAuHG5Xbrl5j4f2YQLGJHWvdR1h13E3nsXWlbkk";
 $opts = [
     "http" => [
         "header" => "auth:" . $token
@@ -359,7 +367,6 @@ if(!is_dir($dossier)){
    mkdir($dossier, 0777,true);
 };
 
-$token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjE4NiwiaWRlbiI6IjQ4MTQ5ODM0NDU4MjE1MjIwNiIsIm1kIjp7InVzZXJuYW1lIjoiU2F5V2VzcyIsImtleVZlcnNpb24iOjMsImRpc2NyaW1pbmF0b3IiOiI5NTczIn0sInRzIjoxNTQ2NjMwNDgzNTcyfQ.N4WAhAuHG5Xbrl5j4f2YQLGJHWvdR1h13E3nsXWlbkk";
 $opts = [
     "http" => [
         "header" => "auth:" . $token
@@ -383,7 +390,6 @@ if(!is_dir($dossier)){
    mkdir($dossier, 0777,true);
 };
 
-$token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjE4NiwiaWRlbiI6IjQ4MTQ5ODM0NDU4MjE1MjIwNiIsIm1kIjp7InVzZXJuYW1lIjoiU2F5V2VzcyIsImtleVZlcnNpb24iOjMsImRpc2NyaW1pbmF0b3IiOiI5NTczIn0sInRzIjoxNTQ2NjMwNDgzNTcyfQ.N4WAhAuHG5Xbrl5j4f2YQLGJHWvdR1h13E3nsXWlbkk";
 $opts = [
     "http" => [
         "header" => "auth:" . $token
@@ -407,7 +413,6 @@ if(!is_dir($dossier)){
    mkdir($dossier, 0777,true);
 };
 
-$token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjE4NiwiaWRlbiI6IjQ4MTQ5ODM0NDU4MjE1MjIwNiIsIm1kIjp7InVzZXJuYW1lIjoiU2F5V2VzcyIsImtleVZlcnNpb24iOjMsImRpc2NyaW1pbmF0b3IiOiI5NTczIn0sInRzIjoxNTQ2NjMwNDgzNTcyfQ.N4WAhAuHG5Xbrl5j4f2YQLGJHWvdR1h13E3nsXWlbkk";
 $opts = [
     "http" => [
         "header" => "auth:" . $token
@@ -431,7 +436,6 @@ if(!is_dir($dossier)){
    mkdir($dossier, 0777,true);
 };
 
-$token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjE4NiwiaWRlbiI6IjQ4MTQ5ODM0NDU4MjE1MjIwNiIsIm1kIjp7InVzZXJuYW1lIjoiU2F5V2VzcyIsImtleVZlcnNpb24iOjMsImRpc2NyaW1pbmF0b3IiOiI5NTczIn0sInRzIjoxNTQ2NjMwNDgzNTcyfQ.N4WAhAuHG5Xbrl5j4f2YQLGJHWvdR1h13E3nsXWlbkk";
 $opts = [
     "http" => [
         "header" => "auth:" . $token
@@ -456,7 +460,6 @@ if(!is_dir($dossier)){
    mkdir($dossier, 0777,true);
 };
 
-$token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjE4NiwiaWRlbiI6IjQ4MTQ5ODM0NDU4MjE1MjIwNiIsIm1kIjp7InVzZXJuYW1lIjoiU2F5V2VzcyIsImtleVZlcnNpb24iOjMsImRpc2NyaW1pbmF0b3IiOiI5NTczIn0sInRzIjoxNTQ2NjMwNDgzNTcyfQ.N4WAhAuHG5Xbrl5j4f2YQLGJHWvdR1h13E3nsXWlbkk";
 $opts = [
     "http" => [
         "header" => "auth:" . $token

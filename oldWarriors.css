@@ -1,6 +1,7 @@
 /* Image de fond du site */
 body {
     background-image: url(image/fondcarreaux.jpeg);
+	background-attachment: fixed;
 }
 /***************************************************************************/
 /****/
@@ -89,16 +90,16 @@ a.nav-linkactive:hover {
     margin-right: auto;
     margin-left: auto;
     margin-top: 30px;
+	margin-bottom: 2rem;
 }
 .articleOldWarriors {
-    background-color: white;
+    /*background-color: white;*/
     padding: 2rem;
-    margin-bottom: 2rem;
     border-radius: 2rem;
     position: static;
-    background-image: url(image/fondbois3.png);
+  /*  background-image: url(image/fondbois3.png);
 	background-size: 30% 50%;
-	background-repeat: repeat;
+	background-repeat: repeat;*/
 }
 .TitreGuerriers {
 	text-align: center;
@@ -110,31 +111,97 @@ a.nav-linkactive:hover {
 	flex-flow: row wrap;
 	justify-content: space-between;
 	align-items: flex-start;
+	background-image: url(image/background_menu_option1.png);
+	background-repeat: repeat-y;
+	padding: 0rem 4rem;
 }
 .flex::after {
   content: "";
   flex: auto;
 }
 .joueurParti {
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: flex-start;
-	align-items: flex-start;
 	width: 21%;
-	margin: 2rem;
+	margin: 5%;
 	margin-left: 2%;
 	margin-right: 2%;
 	border-style: groove;
-	/*background-color: white;*/
+	background-color: white;
+	background-image: url(image/vieux_papier.jpeg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	display: flex;
+	justify-content: center;
 }
 .Guerrier {
-	margin: 2rem;
+	padding: 2rem;
+	background-image: url(image/clou.png);
+	background-repeat: no-repeat;
+	background-size: 15%;
 }
-.NomGuerrier {
-	margin-bottom: 0;
-}
+
 .TagGuerrier {
 	margin-top: 0;
+	text-align: left;
+	padding: 0% 10%;
+}
+.tropheesImage {
+	width: 11%;
+}
+.levelEtNom {
+	display: flex;
+	flex-flow: row;
+	justify-content: center;
+	align-items: flex-start;
+}
+.level {
+	width: 40px;
+	margin: 0rem 1rem;
+}
+.trophees {
+	text-align: left;
+	padding: 0% 10%;;
+}
+.date {
+	text-align: left;
+	padding: 0% 10%;;
+}
+
+/*#feuille {
+	transform-origin: 0 0; /* La transformation partira du coin en haut à gauche
+	transition-delay: 2s;
+    
+	transform: rotate(40deg); 
+
+	animation-name: feuille;
+	animation-delay: 10s;
+	 
+	animation: feuille 20s ease-out;
+	animation-iteration-count: infinite;
+}
+	@keyframes feuille { 5% { -webkit-transform: rotate(90deg); transform:rotate(90deg); } 11%, 50% { -webkit-transform: rotate(50deg); transform:rotate(50deg); } 80% { -webkit-transform: rotate(60deg); transform:rotate(60deg); } 25% { -webkit-transform: rotate(65deg); transform:rotate(65deg); } } 
+
+/* 90% { -webkit-transform: rotate(70deg); } */
+/* 90% { -webkit-transform: rotate(70deg); transform:rotate(70deg); } */
+
+#feuille:nth-child(odd) {
+	transform-origin: 20px 27px;
+    animation : feuille 10s ease;
+    animation-delay : 2s;
+	animation-iteration-count: 1;
+	animation-timing-function: 10s;
+}
+
+@keyframes feuille {
+	10% { transform : rotate(85deg); } 
+	20% { transform : rotate(10deg); }
+	30% { transform : rotate(80deg); } 
+	40% { transform : rotate(20deg); }
+	50% { transform : rotate(70deg); } 
+	60% { transform : rotate(30deg); }
+	70% { transform : rotate(60deg); } 
+	80% { transform : rotate(40deg); }
+	90% { transform : rotate(50deg); } 
+	100% { transform : rotate(0deg); }
 }
 
 
@@ -188,3 +255,6 @@ a.nav-linkactive:hover {
 }
 
 
+/* @keyframes feuille2 { */
+/* 	100% { transform : rotate(0deg); }  */
+/* } */

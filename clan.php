@@ -642,33 +642,6 @@ $(document).ready(function(){
 	     </tbody>
      	</table>
      	
-        <script>
-       /* function colonneRang1a50ou50a1(ascdesc) {                                                  // définit fonction trie colonne rang
-          var z = document.getElementById('tabletrier').getElementsByTagName('tr');                // prend le nombre de ligne dans le tableau
-          var t;                                                                                   // definition de t comme variable
-          var tableau = document.getElementById("tabletrier");                                     // on prend le tableau
-            if(ascdesc == "ascendant") {                                                                  // si ascendant                          
-                var l = 0;                                                                         // definition de l comme variable et on lui assimile la valeur 0
-                for(t = 1;t <= z.length; t++){                                                     // boucle pour en fonction du nombre de ligne
-                    var ligne = tableau.rows[t];                                                   // prise des lignes du tableau 1 par 1
-                    ligne.deleteCell(0);                                                           // effaçage de la premiere cellule de la ligne
-                    var x = ligne.insertCell(0);                                                   // definit x pour insertion de la première cellule de la ligne
-                    x.innerHTML = ++l;                                                             // ecrire dans la cellule
-                }
-     	    } else if(ascdesc == 'descendant') {                                                                               // si descendant
-                var l = 50;                                                                  // definition de l comme variable et on lui assimile le nombre de ligne du tableau
-                    for(t = 1;t <= z.length; t++){                                                 // boucle pour en fonction du nombre de ligne
-                        var ligne = tableau.rows[t];                                               // prise des lignes du tableau 1 par 1
-                        ligne.deleteCell(0);                                                       // effaçage de la premiere cellule de la ligne
-                        var x = ligne.insertCell(0);                                               // definit x pour insertion de la première cellule de la ligne
-                        x.innerHTML = l--;                                                         // ecrire dans la cellule
-                    }
-              }
-        }
-       
-       */
-     	</script>
-     	
       </div>
     </div>
   </div>

@@ -26,7 +26,7 @@ function copieFichierClan() {
 			$i++;
 		}
 		//On met le tableau encodé dans le fichier copyCLanMembers.json
-		//file_put_contents("JSON/copyClanMembers.json", json_encode($copyClanMembers));
+		file_put_contents("JSON/copyClanMembers.json", json_encode($copyClanMembers));
 	}
 }
 
@@ -93,14 +93,13 @@ function newWarriorsAndOldWarriors() {
 	foreach($copyClanMembers as $value) {
 		//Si le membre n'est pas dans le tableau clanMembersActuel (Le nouveau fichier clan)
 		if (!in_array($copyClanMembers[$i], $clanMembersActuel)) {
+			$oldWarriors[date('W|y')][] = $copyClanMembers[$i];
 			foreach( $OLDWarriors as $dateIndex => $date) {
 				foreach( $date as $dateKey => $tags ) {
 					foreach( $tags as $tagIndex => $tag ) {
 						if ($copyClanMembers[$i] == $tag) {
 						unset( $OLDWarriors[$dateIndex][$dateKey][$tagIndex] );
-						$oldWarriors[date('W|y')][] = $copyClanMembers[$i];
 						}
-						//echo "$tagIndex: $tag \n";
 					}
 				}
 			}

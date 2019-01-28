@@ -3,7 +3,7 @@
 session_start();
 
 if (isset($_POST['username']) && isset($_POST['password'])) {
-    $users = json_decode(file_get_contents("users.json"), true);
+    $users = json_decode(file_get_contents("secrets.json"), true);
     $username = $_POST['username'];
     $password = $_POST['password'];
     if (array_key_exists($username, $users)) {

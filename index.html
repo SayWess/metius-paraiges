@@ -17,8 +17,19 @@
   
   
 </head>
-<body>
+<body onload="musique()">
 
+<script> 
+
+var mySound;
+var myMusic;
+
+function musique() {
+    myMusic = new sound("34_Clash_of_Kings.mp3");
+    myMusic.play();
+}
+
+</script>
 <div class="jumbotron header">
 </div>
 
@@ -53,7 +64,7 @@
   <div class="row">
   
      <div class="col-sm-12 w3-animate-zoom article">
-      <img src="image/CR_Sorcier.png" class="w3-animate-zoom float-right imagenone"></img>
+      <img src="image/CartesCR/CR_Sorcier.png" class="w3-animate-zoom float-right imagenone"></img>
       <h2>Métius Paraiges</h2>
       <br>
       <h4>Description :</h4>
@@ -64,7 +75,7 @@
      </div>
     
     <div class="col-sm-12 w3-animate-zoom article">
-      <img src="image/CR_Squelette.png" class="w3-animate-zoom float-right imagenone"></img>
+      <img src="image/CartesCR/CR_Squelette.png" class="w3-animate-zoom float-right imagenone"></img>
       <h2>Dernière News !</h2>
       <br>
       <h4>Enfin, le voila !</h4>
@@ -76,7 +87,7 @@
     </div>
     
     <div class="col-sm-12 w3-animate-zoom article">
-      <img src="image/CR_Esprits de Feu.png" class="w3-animate-zoom float-right imagenone"></img>
+      <img src="image/CartesCR/CR_Esprits de Feu.png" class="w3-animate-zoom float-right imagenone"></img>
       <h2>Contrat SUPERCELL</h2>
       <br>
       <h4>CONTRAT</h4>
@@ -89,6 +100,8 @@
     
   </div>
 </div>
+
+<!--<audio src="Sounds/One Piece Epic Music.mp3"  controls></audio> -->
 
 <div class="jumbotron footer">
   <p>Auteur : SayWess | Dernière modification: 2018-12-27</p>

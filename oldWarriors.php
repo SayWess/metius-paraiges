@@ -12,6 +12,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js" ></script>
+  <script src="less.js" data-poll="1000" data-relative-urls="false"></script>
+  <link data-dump-line-numbers="all" data-global-vars='{ "myvar": "#ddffee", "mystr": "\"quoted\"" }' rel="stylesheet/less" type="text/css" href="less/styles.less">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">                                                                           <!--  Utilisation Boostrap et W3.css  -->
   <link rel="stylesheet" href="oldWarriors.css" type="text/css">
   <link rel="icon" href="image/ImageClan.jpeg" type="image/jpeg">
@@ -122,14 +125,16 @@
 								?>
 								
 								
-								<div class="joueurParti">
+								<div id="feuille" class="joueurParti">
 									<div class="Guerrier">
-										<h3 class="NomGuerrier"> <?php echo $fichierJoueurParti->name ?> </h3>
-										<p class="TagGuerrier"> #<?php echo $fichierJoueurParti->tag ?> </p>
-										<h3> <?php echo $fichierJoueurParti->{"stats"}->level ?> </h3>
-										<h4> <?php echo $fichierJoueurParti->{"stats"}->maxTrophies ?> trophées max </h4>
-										<h3> Arrivé le <?php echo $dateArrivee ?></h3>
-										<h3> Parti le <?php echo key($dateParti) ?> </h3>
+										<div class="levelEtNom">
+											<h3 class="NomGuerrier"> <?php echo $fichierJoueurParti->name ?> </h3>
+											<img class="level" src="image/level1.png">
+										</div>
+										<h6 class="TagGuerrier"> #<?php echo $fichierJoueurParti->tag ?> </h6>
+<!-- 									<h3> <?php //echo $fichierJoueurParti->{"stats"}->level ?> </h3> -->
+										<h5 class="trophees"> <?php echo $fichierJoueurParti->{"stats"}->maxTrophies ?> <img class="tropheesImage" src="image/trophees.png"> max </h5>
+										<h3 class="date"> Du <?php echo $dateArrivee ?> au <?php echo key($dateParti) ?> </h3>
 									</div>
 								
 								</div>
@@ -149,10 +154,146 @@
 			echo anniversaireJoueurClan();
 			?>
 			
-			
-			
+			<div id="feuille" class="joueurParti">
+									<div class="Guerrier">
+										<div class="levelEtNom">
+											<h3 class="NomGuerrier"> CFD</h3>
+											<img class="level" src="image/level1.png">
+										</div>
+										<h6 class="TagGuerrier"> #25J5H431RT</h6>
+										<h5 class="trophees"> 5200 <img class="tropheesImage" src="image/trophees.png"> max </h5>
+										<h3 class="date"> Du 01|17 au 12|19</h3>
+									</div>
+			</div>
+			<div id="feuille" class="joueurParti">
+									<div class="Guerrier">
+										<div class="levelEtNom">
+											<h3 class="NomGuerrier"> CFD</h3>
+											<img class="level" src="image/level1.png">
+										</div>
+										<h6 class="TagGuerrier"> #25J5H431RT</h6>
+										<h5 class="trophees"> 5200 <img class="tropheesImage" src="image/trophees.png"> max </h5>
+										<h3 class="date"> Du 01|17 au 12|19</h3>
+									</div>
+			</div>
+	 		<div id="feuille" class="joueurParti">
+									<div class="Guerrier">
+										<div class="levelEtNom">
+											<h3 class="NomGuerrier"> CFD</h3>
+											<img class="level" src="image/level1.png">
+										</div>
+										<h6 class="TagGuerrier"> #25J5H431RT</h6>
+										<h5 class="trophees"> 5200 <img class="tropheesImage" src="image/trophees.png"> max </h5>
+										<h3 class="date"> Du 01|17 au 12|19</h3>
+									</div>
+			</div>
+			<div id="feuille" class="joueurParti">
+									<div class="Guerrier">
+										<div class="levelEtNom">
+											<h3 class="NomGuerrier"> CFD</h3>
+											<img class="level" src="image/level1.png">
+										</div>
+										<h6 class="TagGuerrier"> #25J5H431RT</h6>
+										<h5 class="trophees"> 5200 <img class="tropheesImage" src="image/trophees.png"> max </h5>
+										<h3 class="date"> Du 01|17 au 12|19</h3>
+									</div>
+			</div>
+			<div id="feuille" class="joueurParti">
+									<div class="Guerrier">
+										<div class="levelEtNom">
+											<h3 class="NomGuerrier"> CFD</h3>
+											<img class="level" src="image/level1.png">
+										</div>
+										<h6 class="TagGuerrier"> #25J5H431RT</h6>
+										<h5 class="trophees"> 5200 <img class="tropheesImage" src="image/trophees.png"> max </h5>
+										<h3 class="date"> Du 01|17 au 12|19</h3>
+									</div>
+			</div>
+	 		<div id="feuille" class="joueurParti">
+									<div class="Guerrier">
+										<div class="levelEtNom">
+											<h3 class="NomGuerrier"> CFD</h3>
+											<img class="level" src="image/level1.png">
+										</div>
+										<h6 class="TagGuerrier"> #25J5H431RT</h6>
+										<h5 class="trophees"> 5200 <img class="tropheesImage" src="image/trophees.png"> max </h5>
+										<h3 class="date"> Du 01|17 au 12|19</h3>
+									</div>
+			</div>
+	 		<div id="feuille" class="joueurParti">
+									<div class="Guerrier">
+										<div class="levelEtNom">
+											<h3 class="NomGuerrier"> CFD</h3>
+											<img class="level" src="image/level1.png">
+										</div>
+										<h6 class="TagGuerrier"> #25J5H431RT</h6>
+										<h5 class="trophees"> 5200 <img class="tropheesImage" src="image/trophees.png"> max </h5>
+										<h3 class="date"> Du 01|17 au 12|19</h3>
+									</div>
+			</div>
+					<div id="feuille" class="joueurParti">
+									<div class="Guerrier">
+										<div class="levelEtNom">
+											<h3 class="NomGuerrier"> CFD</h3>
+											<img class="level" src="image/level1.png">
+										</div>
+										<h6 class="TagGuerrier"> #25J5H431RT</h6>
+										<h5 class="trophees"> 5200 <img class="tropheesImage" src="image/trophees.png"> max </h5>
+										<h3 class="date"> Du 01|17 au 12|19</h3>
+									</div>
+			</div>
+			<div id="feuille" class="joueurParti">
+									<div class="Guerrier">
+										<div class="levelEtNom">
+											<h3 class="NomGuerrier"> CFD</h3>
+											<img class="level" src="image/level1.png">
+										</div>
+										<h6 class="TagGuerrier"> #25J5H431RT</h6>
+										<h5 class="trophees"> 5200 <img class="tropheesImage" src="image/trophees.png"> max </h5>
+										<h3 class="date"> Du 01|17 au 12|19</h3>
+									</div>
+			</div>
+			<div id="feuille" class="joueurParti"> 
+									<div class="Guerrier">
+										<div class="levelEtNom">
+											<h3 class="NomGuerrier"> CFD</h3>
+											<img class="level" src="image/level1.png">
+										</div>
+										<h6 class="TagGuerrier"> #25J5H431RT</h6>
+										<h5 class="trophees"> 5200 <img class="tropheesImage" src="image/trophees.png"> max </h5>
+										<h3 class="date"> Du 01|17 au 12|19</h3>
+									</div>
+			</div>
+ 			<div id="feuille" class="joueurParti"> 
+									<div class="Guerrier">
+										<div class="levelEtNom">
+											<h3 class="NomGuerrier"> CFD</h3>
+											<img class="level" src="image/level1.png">
+										</div>
+										<h6 class="TagGuerrier"> #25J5H431RT</h6>
+										<h5 class="trophees"> 5200 <img class="tropheesImage" src="image/trophees.png"> max </h5>
+										<h3 class="date"> Du 01|17 au 12|19</h3>
+									</div>
+			</div>
+
 		</div>
 		
+		<script> 
+		
+		//Longueur du background fondbois, pour que les affiches des joueurs soient dans les rangées du background
+		var nbJoueur = $('div.joueurParti').length;
+		nbJoueurs = nbJoueur - nbJoueur  % 4 + 4
+		var x = nbJoueurs / 4;
+		var pourcentage = 100 / x;
+		var size = pourcentage.toFixed(2) + "%";
+		$('.flex').css("background-size", "100% " + size);
+		
+		
+		var affiche = Math.floor(Math.random() * nbjoueur);
+		affiche;
+		
+		
+		</script>
 	
 		
 		
