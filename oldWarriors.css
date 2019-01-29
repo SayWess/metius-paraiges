@@ -166,32 +166,19 @@ a.nav-linkactive:hover {
 	padding: 0% 10%;;
 }
 
-/*#feuille {
-	transform-origin: 0 0; /* La transformation partira du coin en haut à gauche
-	transition-delay: 2s;
-    
-	transform: rotate(40deg); 
 
-	animation-name: feuille;
-	animation-delay: 10s;
-	 
-	animation: feuille 20s ease-out;
-	animation-iteration-count: infinite;
-}
-	@keyframes feuille { 5% { -webkit-transform: rotate(90deg); transform:rotate(90deg); } 11%, 50% { -webkit-transform: rotate(50deg); transform:rotate(50deg); } 80% { -webkit-transform: rotate(60deg); transform:rotate(60deg); } 25% { -webkit-transform: rotate(65deg); transform:rotate(65deg); } } 
 
-/* 90% { -webkit-transform: rotate(70deg); } */
-/* 90% { -webkit-transform: rotate(70deg); transform:rotate(70deg); } */
 
-#feuille:nth-child(odd) {
+.balancier {
 	transform-origin: 20px 27px;
-    animation : feuille 10s ease;
+    animation : balancier ease-in-out;
+	animation-duration: 10s;
     animation-delay : 2s;
 	animation-iteration-count: 1;
 	animation-timing-function: 10s;
 }
 
-@keyframes feuille {
+@keyframes balancier {
 	10% { transform : rotate(85deg); } 
 	20% { transform : rotate(10deg); }
 	30% { transform : rotate(80deg); } 
@@ -255,6 +242,3 @@ a.nav-linkactive:hover {
 }
 
 
-/* @keyframes feuille2 { */
-/* 	100% { transform : rotate(0deg); }  */
-/* } */

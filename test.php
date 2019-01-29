@@ -295,8 +295,7 @@
 			var nbJoueur = $('div.joueurParti').length;
 			var time = Math.ceil(Math.random() * nbJoueur);
 			document.querySelector('div.joueurParti:nth-child(' + time + ')').classList.add("balancier");
-			setTimeout(balancier, 100000);
-			console.log(time)
+			setTimeout(balancier, 1000);
 		}
 		balancier();
 		
