@@ -1,4 +1,7 @@
 secrets.json
 downloadApiRoyaleData.php
-JSON/
-**/.directory
+JSON/joueurProfil/
+JSON/joueurChest/
+JSON/max/
+JSON/top/
+
