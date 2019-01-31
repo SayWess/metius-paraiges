@@ -1,54 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<?php 
 
+	$cssFile = "profil";
+	include "Templates/head.php"; 
 
+?>
 
-  <title>Métius Paraiges</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">                                                                           <!--  Utilisation Boostrap et W3.css  -->
-  <link rel="stylesheet" href="profil.css" type="text/css">
-  <link rel="icon" href="image/ImageClan.jpeg" type="image/jpeg">
+<body>                                                                                                             <!--  En-tête de page (image)  -->
 
-
-  
-</head>
-<body>
-
-<div class="jumbotron header"></div>                                                                                                                <!--  En-tête de page (image)  -->
-
-
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">                                                                                           <!--  Barre de navigation avec bootstrap  -->
-  <a class="navbar-brand" href="index.html">Home</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="collapsibleNavbar">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-linkactive" href="clan.php">Clan</a>                                                                         <!--  "linkactive" signifie que c'est le lien actif, pour que l'utilisateur repère sur quelle page il est  -->
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="reglement.html">Règlement</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="recrutement.html">Recrutement</a>
-      </li>    
-      <li class="nav-item">
-        <a class="nav-link" href="login.php">Espace Admin</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="oldWarriors.php">Les disparus</a>
-      </li>
-    </ul>
-  </div>  
-</nav>
+<?php 
+	
+	include "Templates/header.php";   //On inclue le fichier qui contient l'image d'en tête
+	
+	$pageActive = "profil"; //On définit $pageActive par "clan", pour indiquer que la page qui est active est clan
+	include "Templates/navigation.php"; //On inclue le fichier qui contient la navigation
+?>
 
 <?php
 	//ON RECUPERE LA VALEUR TAG QUI A ETE APPORTE PAR L'URL

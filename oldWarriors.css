@@ -84,7 +84,7 @@ a.nav-linkactive:hover {
 /* Article joueur info */
 /****/
 .containerMoyen {
-    width: 90vw;
+    width: 97vw;
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
@@ -120,10 +120,10 @@ a.nav-linkactive:hover {
   flex: auto;
 }
 .joueurParti {
-	width: 21%;
+	width: 22%;
 	margin: 5%;
-	margin-left: 2%;
-	margin-right: 2%;
+	margin-left: 1.5%;
+	margin-right: 1.5%;
 	border-style: groove;
 	background-color: white;
 	background-image: url(image/vieux_papier.jpeg);
@@ -152,9 +152,10 @@ a.nav-linkactive:hover {
 	flex-flow: row;
 	justify-content: center;
 	align-items: flex-start;
+	margin-bottom: 0;
 }
 .level {
-	width: 40px;
+	width: 55px;
 	margin: 0rem 1rem;
 }
 .trophees {
