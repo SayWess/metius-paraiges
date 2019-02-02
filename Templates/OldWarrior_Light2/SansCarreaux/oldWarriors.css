@@ -1,6 +1,6 @@
 /* Image de fond du site */
 body {
-    background-color: #222;
+    background-color: lightgrey;
 }
 /***************************************************************************/
 /****/
@@ -97,7 +97,7 @@ a.nav-linkactive:hover {
     font-size: 4em;
     letter-spacing: 4px;
     font-weight: 100;
-    color: #999;
+    color: #666;
     margin-left: 1em;
 	margin-bottom: 3rem;
 }
@@ -117,7 +117,6 @@ a.nav-linkactive:hover {
   content: "";
   flex: auto;
 }
-/* #000, #111, #222, #333 #999  */
 
 .joueurParti {
     width: 23%;
@@ -131,9 +130,10 @@ a.nav-linkactive:hover {
     -moz-border-bottom-colors: none;
     -moz-border-left-colors: none;
     border-image: none;
-    background-color: #000;
+    background-color: #FFF;
     margin-bottom: 2em;
     border-width: 0px;
+    box-shadow: 0px 0px 2em 0px #BBB;
 }
 
 .Guerrier {
@@ -141,16 +141,16 @@ a.nav-linkactive:hover {
 }
 
 .levelEtNom {
-    color: #fff;
+    color: white;
     flex-flow: row nowrap;
     display: flex;
     padding-left: 20px;
     align-items: center;
     margin-bottom: 0px;
     padding-top: 1.6em;
-    background: #000 none repeat scroll 0% 0%;
+    background: red none repeat scroll 0% 0%;
     border-bottom: 5px solid #FFF;
-    border-bottom: 10px solid #D40000;
+    border-top: 10px solid #D40000;
 }
 
 .NomGuerrier {
@@ -159,7 +159,7 @@ a.nav-linkactive:hover {
 }
 
 .TagGuerrier {
-    margin-top: 0px;
+	margin-top: 11px;
 	margin-bottom: 10px;
     text-align: right;
     padding: 0% 10%;
@@ -170,11 +170,11 @@ a.nav-linkactive:hover {
     justify-content: flex-end;
     align-items: center;
     color: #666;
-    background: #333 none repeat scroll 0% 0%;
+    background: #EEE none repeat scroll 0% 0%;
 }
 
 .trophees {
-	margin-bottom: 10px;
+	margin-bottom: 11px;
     text-align: right;
     padding-right: 20px;
     height: 35px;
@@ -184,7 +184,7 @@ a.nav-linkactive:hover {
     justify-content: flex-end;
     align-items: center;
     color: #666;
-    background: #333 none repeat scroll 0% 0%;
+    background: #EEE none repeat scroll 0% 0%;
 }
 
 .tropheesImage {
@@ -198,7 +198,7 @@ a.nav-linkactive:hover {
 }
 
 .date {
-	margin-bottom: 10px;
+	margin-bottom: 11px;
     text-align: right;
     padding-right: 20px;
     font-size: 20px;
@@ -208,7 +208,7 @@ a.nav-linkactive:hover {
     align-items: center;
     justify-content: flex-end;
     color: #666;
-    background: #333 none repeat scroll 0% 0%;
+    background: #EEE none repeat scroll 0% 0%;
 }	
 
 
