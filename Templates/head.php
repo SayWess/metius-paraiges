@@ -15,10 +15,25 @@
 		}
 		return "";
 	}
-	var settings = getCookie('metius-settings');
-	var parseSettings = JSON.parse(settings);
-	console.log(parseSettings);
-	var music = parseSettings[0][1];
+	
+	function updateCookie(key, value) {
+		var settings = JSON.parse(getCookie('metius-settings'));
+		settings[key] = value;
+		setCookie('metius-settings', JSON.stringify(settings), 365);                    
+	}
+	
+	function getSettings(parameter) {
+		var settings = getCookie('metius-settings');
+		settings = settings ? JSON.parse(settings) : {
+			Music: 'Clash of Kings',
+			Langue: 'francais',
+			Son: 'Clash',
+			isMusicPaused: false,
+		};
+		return parameter ? settings[parameter] : settings;
+	}
+	
+	var music = getSettings('Music');
 	
 </script>
 

@@ -6,7 +6,9 @@ function sound() {
 var audio = new Audio("Sounds/" + music + '.mp3'); 
 
 function musicFond(music, status) {
- 	audio.play();
+	if(getSettings('isMusicPaused') == true) {
+		audio.play();
+	}
 }
 	
 function reload() {
@@ -14,13 +16,15 @@ function reload() {
 	document.querySelector('#music').setAttribute("src", "Sounds/" + music + ".mp3");
 }
 
-var play = "play";
+var play;
 
-function pause() {
+function pauses() {
 	play = !play;
 	if(play == false) {
 		audio.pause();
+		updateCookie('isMusicPaused', play);
 	} else if(play == true) {
 		audio.play();
+		updateCookie('isMusicPaused', play);
 	}
 }

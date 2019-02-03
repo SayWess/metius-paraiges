@@ -23,7 +23,7 @@
 	<div class="containerD">
 		
 		<div class="borderDiv">
-		<button type="button" class="buttonSon w3-btn w3-cercle" onclick="pause();"> <img class="Son" src="image/audio_off.png" alt="active"> </button>
+		<button type="button" class="buttonSon w3-btn w3-cercle" onclick="pauses()"> <img class="Son" src="image/audio_off.png" alt="active"> </button>
 		<h1 class="text-left"> Musiques </h1>
 		</div>
 		
@@ -44,7 +44,7 @@
 					<div class="choi">
 						<input type="radio" name="Music" value="Clash of Kings"> Clash of King
 					</div>
-			
+					
 				</div>
 			
 			</div>
@@ -122,10 +122,10 @@
 				<div class="choix">
 				
 					<div class="choi">
-						<input type="radio" name="Langue" value="Clash  of King"> Clash of King
+						<input type="radio" name="Langue" value="Francais"> Français
 					</div>
 					<div class="choi">
-						<input type="radio" name="Langue" value="Clash of King"> Clash of King
+						<input type="radio" name="Langue" value="Anglais"> Anglais
 					</div>
 			
 				</div>
@@ -172,11 +172,16 @@ function setCookie(cname,cvalue,exdays) {
   document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
 
-document.querySelector('.js-form').addEventListener('submit', function(event) {
+document.querySelector('.js-form').addEventListener('submit', event => {
     event.preventDefault();
-    var formData = new FormData(event.target);
-    var settings = [...formData.entries()];
-    setCookie('metius-settings', JSON.stringify(settings), 1000);
+    var formFields = Array.from(event.target.elements).filter(q => q.checked);
+    var settings = formFields.reduce((data, element) => ({
+      ...data,
+      [element.name]: element.value,
+    }), {});
+    cookie = getSettings();
+	settings = Object.assign(cookie, settings);
+    setCookie('metius-settings', JSON.stringify(settings), 365);
 });
 
 </script>
