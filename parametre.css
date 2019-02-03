@@ -1,0 +1,123 @@
+ 
+/* Image de fond du site */
+body {
+    background-image: url(image/CarreauxGrisFonce.png);
+	background-attachment: fixed;
+}
+/***************************************************************************/
+/****/
+/* Police d'écriture du site */
+/****/
+/*@font-face {
+    font-family: 'FredokaOne';
+    src: url('police/FredokaOne-Regular.ttf');
+}
+body {
+    font-family: 'FredokaOne';
+}
+h1 {
+    font-family: 'FredokaOne';
+}
+h2 {
+    font-family: 'FredokaOne';
+}
+h3 {
+    font-family: 'FredokaOne';
+}
+h4 {
+    font-family: 'FredokaOne';
+}
+h5 {
+    font-family: 'FredokaOne';
+}
+h6 {
+    font-family: 'FredokaOne';
+}*/
+/*********************************************************************************/
+/****/
+/* Header du site */
+/****/
+.jumbotron {
+    border-radius: 0rem;
+}
+.header {
+    background-image: url(image/top_bg1.png);
+    background-color: black;
+    background-size: 100% 100%;
+    margin-bottom: 0;
+}
+
+/*********************************************************************************/
+/****/
+/* Content */
+/****/
+
+.content {
+	color: white;
+	padding: 0 5rem;
+	background-image: url(image/CarreauxGrisFonce.png);
+	background-attachment: fixed;
+}
+
+.containerD {
+	padding: 0;
+	margin: 4rem 0;
+	box-shadow: 0 0 4rem 0 #333;
+}
+
+.borderDiv {
+	background-color: black;
+	border-bottom: 10px solid #D40000;
+	padding: 2rem;
+}
+
+.choixMusiques {
+	background-color: grey;
+	background-image: linear-gradient(to bottom right, darkgrey, black);
+	padding: 3rem 5rem;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
+
+.Groupe-musique {
+	color: black;
+	background-color: #333;
+	background-image: linear-gradient(to bottom right, lightgrey, grey);
+	padding: 2rem;
+}
+
+.sous-titre {
+	
+}
+
+.choix {
+	padding-top: 2rem;
+	text-align: center;
+}
+
+.Son {
+	width: 50px;
+}
+
+.buttonSon {
+	float: left;
+	padding: 0;
+}
+
+/*********************************************************************************/
+/****/
+/* Footer */
+/****/
+.footer {
+    background-color: black;
+    color: white;
+    margin-bottom: 0;
+    text-align: center;
+	padding: 1rem 2rem;
+}
+.footer p {
+	margin-bottom: 0;
+}
+
+

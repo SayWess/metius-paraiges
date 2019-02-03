@@ -1,4 +1,3 @@
-
 <?php 
 
 	$clan  = "";
@@ -26,6 +25,7 @@
 	} elseif($pageActive == "profil") {
 		$clan = "active";
 	}
+	
 ?>
 
 
@@ -59,11 +59,14 @@
 		if($deconnection == "true") {
 		?>
 		<li class="nav-item">
-			<a class='navbar-brand' href='logout.php' onclick="sound()">Logout</a>
+			<a class='navbar-brand' href='logout.php' onclick="sound()">Se déconnecter</a>
 		</li>
 		<?php
 		}
       ?>
+		<li class="nav-item">
+			<a class='navbar-brand' href='parametre.php' onclick="sound()"><img class="parametre" src="image/parametre.png" alt="Paramètres"></a>
+		</li>
 </nav> 
 
 

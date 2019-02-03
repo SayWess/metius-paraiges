@@ -101,6 +101,7 @@ a.nav-linkactive:hover {
     color: #999;
     margin-left: 1em;
 	margin-bottom: 3rem;
+	text-shadow: 2px 2px 4px black;
 }
 
 .flex {

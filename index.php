@@ -7,19 +7,7 @@
 
 ?>
 
-<body>
-<!-- onload="musicFond()" -->
-<script> 
-
-var mySound;
-var myMusic;
-
-function musique() {
-    myMusic = new sound("34_Clash_of_Kings.mp3");
-    myMusic.play();
-}
-
-</script>
+<body onload="musicFond(music);">
 
 <?php 
 	
@@ -119,10 +107,10 @@ $dates = "";
 
 if(!is_null($jOld)) {
 	?>
-	<div> 
+	<!--<div> 
 		<h1> Bon départ à <?php echo join(', ', $jOld)." le ".$dates ?>  </h1>
 	
-	</div>
+	</div>-->
 	
 	
 	<?php

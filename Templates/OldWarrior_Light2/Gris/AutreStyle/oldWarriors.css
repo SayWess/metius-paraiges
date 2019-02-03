@@ -1,13 +1,13 @@
 /* Image de fond du site */
 body {
-    background-image: url(image/CarreauxRouge.png);
+    background-image: url(image/carreauxGris.png);
 	background-attachment: fixed;
 }
 /***************************************************************************/
 /****/
 /* Police d'écriture du site */
 /****/
-@font-face {
+/*@font-face {
     font-family: 'FredokaOne';
     src: url('police/FredokaOne-Regular.ttf');
 }
@@ -31,7 +31,7 @@ h5 {
 }
 h6 {
     font-family: 'FredokaOne';
-}
+}*/
 /*********************************************************************************/
 /****/
 /* Header du site */
@@ -135,7 +135,7 @@ a.nav-linkactive:hover {
     background-color: #FFF;
     margin-bottom: 2em;
     border-width: 0px;
-    box-shadow: 0px 0px 2em 0px darkred;
+    box-shadow: 0px 0px 2em 0px black;
 }
 
 .Guerrier {
@@ -143,16 +143,16 @@ a.nav-linkactive:hover {
 }
 
 .levelEtNom {
-    color: #333;
+    color: white;
     flex-flow: row nowrap;
     display: flex;
     padding-left: 20px;
     align-items: center;
     margin-bottom: 0px;
     padding-top: 1.6em;
-    background: #FFF none repeat scroll 0% 0%;
-    border-top: 5px solid #FFF;
-    border-bottom: 10px solid #D40000;
+    background: grey none repeat scroll 0% 0%;
+    border-top: 5px solid grey;
+    border-bottom: 10px solid darkgrey;
 }
 
 .NomGuerrier {
@@ -161,7 +161,8 @@ a.nav-linkactive:hover {
 }
 
 .TagGuerrier {
-    margin-top: 0px;
+	margin-top: 11px;
+	margin-bottom: 10px;
     text-align: right;
     padding: 0% 10%;
 	font-size: 16px;
@@ -175,6 +176,7 @@ a.nav-linkactive:hover {
 }
 
 .trophees {
+	margin-bottom: 11px;
     text-align: right;
     padding-right: 20px;
     height: 35px;
@@ -198,6 +200,7 @@ a.nav-linkactive:hover {
 }
 
 .date {
+	margin-bottom: 11px;
     text-align: right;
     padding-right: 20px;
     font-size: 20px;

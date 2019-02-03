@@ -48,30 +48,6 @@ h6 {
     background-size: 100% 100%;
     margin-bottom: 0;
 }
-/*********************************************************************************/
-/****/
-/* Barre de navigation */
-/****/
-a:hover {
-    text-decoration: none;
-}
-.nav-linkactive {
-    color: #DCDCDC;
-    display: block;
-    padding: .5rem 1rem;
-    text-decoration: none;
-    padding-right: .5rem;
-    padding-left: .5rem;
-}
-a.nav-linkactive:hover {
-    color: #C0C0C0;
-}
-.navbar {
-    position: sticky;
-    top: 0;
-    z-index: 6;
-	list-style-type: none; 
-}
 
 /*********************************************************************************/
 /****/

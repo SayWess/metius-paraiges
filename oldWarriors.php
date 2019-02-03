@@ -184,7 +184,7 @@
 			
 		</div>
 		
-		<script> 
+		<!--<script> 
 		
 	//Longueur du background fondbois, pour que les affiches des joueurs soient dans les rangées du background
 		function background() {
@@ -209,7 +209,7 @@
 		balancier();
 		
 		
-		</script>
+		</script>-->
 	
 		
 		
