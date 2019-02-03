@@ -2,6 +2,8 @@
 
 <?php 
 
+	$cookie = json_decode($_COOKIE['metius-settings'], true);
+
 	$cssFile = "parametre";
 	include "Templates/head.php"; 
 
@@ -147,13 +149,50 @@
 	
 	<div class="containerD">
 	
-	<h1 class="text-left"> Thèmes </h1>
-		
-		<h3 class="musique"> Quelle thème voulez-vous ? </h3>
-		<div class="choixMusiques"> 
+		<div class="borderDiv">
+			<h1 class="text-left"> Thèmes </h1>
 		</div>
 		
-	</div>
+		<div class="choixMusiques"> 
+				
+			<div class="themes">
+				<ul class="diapoTheme">
+				
+					<li>
+						<label>
+							<input type="radio" name="Theme" value="Light1">
+								<img src="image/header.jpeg">
+					</li>
+					<li>
+						<label>
+							<input type="radio" name="Theme" value="Light2">
+								<img src="image/header.jpeg">
+					</li>
+					<li>
+						<label>
+							<input type="radio" name="Theme" value="LightRed">
+								<img src="image/header.jpeg">
+					</li>
+					<li>
+						<label>
+							<input type="radio" name="Theme" value="Dark1">
+								<img src="image/header.jpeg">
+					</li>
+					<li>
+						<label>
+							<input type="radio" name="Theme" value="Dark2">
+								<img src="image/header.jpeg">
+					</li>
+					<li>
+						<label>
+							<input type="radio" name="Theme" value="DarkRed">
+								<img src="image/header.jpeg">
+					</li>
+				</ul>
+				
+			</div>
+		
+		</div>
 	
 	</div>
 	

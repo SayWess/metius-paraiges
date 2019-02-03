@@ -150,9 +150,9 @@ a.nav-linkactive:hover {
     align-items: center;
     margin-bottom: 0px;
     padding-top: 1.6em;
-    background: red none repeat scroll 0% 0%;
-    border-top: 5px solid red;
-    border-bottom: 10px solid #D40000;
+    background: #D40000 none repeat scroll 0% 0%;
+    border-top: 5px solid #D40000;
+    border-bottom: 10px solid red;
 }
 
 .NomGuerrier {

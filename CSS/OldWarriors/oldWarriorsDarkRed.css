@@ -1,6 +1,6 @@
 /* Image de fond du site */
 body {
-    background-image: url(image/CarreauxGrisFonce.png);
+    background-image: url(../../image/CarreauxGrisFonce.png);
 	background-attachment: fixed;
 }
 /***************************************************************************/
@@ -9,7 +9,7 @@ body {
 /****/
 /*@font-face {
     font-family: 'FredokaOne';
-    src: url('police/FredokaOne-Regular.ttf');
+    src: url('../../police/FredokaOne-Regular.ttf');
 }
 body {
     font-family: 'FredokaOne';
@@ -40,7 +40,7 @@ h6 {
     border-radius: 0rem;
 }
 .header {
-    background-image: url(image/top_bg1.png);
+    background-image: url(../../image/top_bg1.png);
     background-color: black;
     background-size: 100% 100%;
     margin-bottom: 0;
@@ -260,12 +260,12 @@ a.nav-linkactive:hover {
 /* Autres classes */
 /****/
 .fond {
-    background-image: url(image/fondbois3.png);
+    background-image: url(../../image/fondbois3.png);
 	background-size: 30% 50%;
 	background-repeat: repeat;
 }
 .fondpapyrus {
-    background-image: url(image/background_menu_option4.png);
+    background-image: url(../../image/background_menu_option4.png);
     background-size: 100% 100%;
     background-color: none;
 }

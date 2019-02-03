@@ -1,6 +1,6 @@
 /* Image de fond du site */
 body {
-    background-image: url(image/CarreauxGrisFonce.png);
+    background-image: url(../../image/CarreauxRouge.png);
 	background-attachment: fixed;
 }
 /***************************************************************************/
@@ -9,7 +9,7 @@ body {
 /****/
 /*@font-face {
     font-family: 'FredokaOne';
-    src: url('police/FredokaOne-Regular.ttf');
+    src: url('../../police/FredokaOne-Regular.ttf');
 }
 body {
     font-family: 'FredokaOne';
@@ -40,7 +40,7 @@ h6 {
     border-radius: 0rem;
 }
 .header {
-    background-image: url(image/top_bg1.png);
+    background-image: url(../../image/top_bg1.png);
     background-color: black;
     background-size: 100% 100%;
     margin-bottom: 0;
@@ -101,7 +101,7 @@ a.nav-linkactive:hover {
     color: white;
     margin-left: 1em;
 	margin-bottom: 3rem;
-	text-shadow: 2px 2px 4px black;
+	text-shadow: 2px 2px 4px grey;
 }
 
 .flex {
@@ -135,7 +135,7 @@ a.nav-linkactive:hover {
     background-color: #FFF;
     margin-bottom: 2em;
     border-width: 0px;
-    box-shadow: 0px 0px 2em 0px black;
+    box-shadow: 0px 0px 2em 0px darkred;
 }
 
 .Guerrier {
@@ -150,9 +150,9 @@ a.nav-linkactive:hover {
     align-items: center;
     margin-bottom: 0px;
     padding-top: 1.6em;
-    background: #D40000 none repeat scroll 0% 0%;
-    border-top: 5px solid #D40000;
-    border-bottom: 10px solid red;
+    background: red none repeat scroll 0% 0%;
+    border-top: 5px solid red;
+    border-bottom: 10px solid #D40000;
 }
 
 .NomGuerrier {
@@ -260,12 +260,12 @@ a.nav-linkactive:hover {
 /* Autres classes */
 /****/
 .fond {
-    background-image: url(image/fondbois3.png);
+    background-image: url(../../image/fondbois3.png);
 	background-size: 30% 50%;
 	background-repeat: repeat;
 }
 .fondpapyrus {
-    background-image: url(image/background_menu_option4.png);
+    background-image: url(../../image/background_menu_option4.png);
     background-size: 100% 100%;
     background-color: none;
 }

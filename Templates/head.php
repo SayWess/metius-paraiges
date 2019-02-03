@@ -29,6 +29,7 @@
 			Langue: 'francais',
 			Son: 'Clash',
 			isMusicPaused: false,
+			Themes: 'no theme',
 		};
 		return parameter ? settings[parameter] : settings;
 	}
