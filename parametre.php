@@ -130,7 +130,7 @@
 			<h1 class="text-left"> Thèmes </h1>
 		</div>
 		
-		<div class="choixMusiques"> 
+		<div class="Themes"> 
 				
 			<div class="themes">
 				<ul class="diapoTheme">

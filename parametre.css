@@ -55,11 +55,10 @@ h6 {
 .content {
 	color: white;
 	padding: 5rem;
-	background-image: url(image/CarreauxGrisFonce.png);
-	background-attachment: fixed;
 }
 
 .flex {
+	margin-bottom: 2rem;
 	display: flex;
 	flex-flow: wrap;
 	flex-grow: 0;
@@ -80,8 +79,6 @@ h6 {
 
 .choixMusiques {
 	background-color: grey;
-	background-image: linear-gradient(to bottom right, darkgrey, black);
-	padding: 3rem 5rem;
 	height: 71%;
 	display: flex;
 	flex-flow: row wrap;
@@ -115,6 +112,15 @@ h6 {
 	padding: 0;
 }
 
+.Themes {
+	background-color: grey;
+	padding: 4rem;
+	height: 71%;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
+
 .themes {
 	overflow-x: scroll;
 }
@@ -128,6 +134,7 @@ h6 {
 
 .imageTheme {
 	width: 500px;
+	box-shadow: 0 0 1rem 0 black;
 }
 
 .Button {
