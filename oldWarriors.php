@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <?php 
-	$cookie = json_decode($_COOKIE['metius-settings'], true);
 	
-	$cssFile = "CSS/OldWarriors/oldWarriors".$cookie['Theme'];
+	if(count($_COOKIE) > 0) {
+		$cookie = json_decode($_COOKIE['metius-settings'], true);
+		$cssFile = "CSS/OldWarriors/oldWarriors".$cookie['Theme'];
+	} else {
+		$cssFile = "CSS/OldWarriors/oldWarriorsLight1";
+	}
+	
 	include "Templates/head.php"; 
 
 ?>

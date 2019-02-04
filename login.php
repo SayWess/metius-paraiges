@@ -26,7 +26,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 
 ?>
 
-<body>
+<body onload="musicFond(music);">
 
 <?php 
 	

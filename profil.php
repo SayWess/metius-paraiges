@@ -6,7 +6,7 @@
 
 ?>
 
-<body>                                                                                                             <!--  En-tête de page (image)  -->
+<body onload="musicFond(music);">                                                                                                             <!--  En-tête de page (image)  -->
 
 <?php 
 	

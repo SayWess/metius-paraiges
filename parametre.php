@@ -21,6 +21,8 @@
 <form class="js-form">
 
 <div class="content">
+
+	<div class="flex">
 	
 	<div class="containerD">
 		
@@ -38,27 +40,18 @@
 				<div class="choix">
 					
 					<div class="choi">
-						<input type="radio" name="Music" value="Clash of Kings"> Clash of King
+						<input type="radio" name="Music" value="Clash of Kings" <?php if($cookie['Music'] === 'Clash of Kings') { echo 'checked'; } ?> > Clash of Kings
 					</div>
 					<div class="choi">
-						<input type="radio" name="Music" value="One Piece Epic Music"> One Piece Music
+						<input type="radio" name="Music" value="Clash Of" <?php if($cookie['Music'] === 'Clash Of') { echo 'checked'; } ?> > Clash of Kings
 					</div>
 					<div class="choi">
-						<input type="radio" name="Music" value="Clash of Kings"> Clash of King
+						<input type="radio" name="Music" value="Clash Kings" <?php if($cookie['Music'] === 'Clash Kings') { echo 'checked'; } ?> > Clash of Kings
 					</div>
 					
 				</div>
 			
 			</div>
-			
-			<div>
-				<h3> Volume </h3>
-				
-				<audio id="music" controls> </audio> 
-			</div>
-		
-		
-			
 		
 		</div>
 	
@@ -80,31 +73,22 @@
 				<div class="choix">
 				
 					<div class="choi">
-						<input type="radio" name="Son" value="Clash of Kings"> Clash of King
+						<input type="radio" name="Son" value="Clash of Kings" <?php if($cookie['Son'] === 'Clash of Kings') { echo 'checked'; } ?> > Clash of Kings
 					</div>
 					<div class="choi">
-						<input type="radio" name="Son" value="Clash of"> Clash of King
+						<input type="radio" name="Son" value="Clash of" <?php if($cookie['Son'] === 'Clash of') { echo 'checked'; } ?> > Clash of Kings
 					</div>
 					<div class="choi">
-						<input type="radio" name="Son" value="Clash"> Clash of King
+						<input type="radio" name="Son" value="Clash" <?php if($cookie['Son'] === 'Clash') { echo 'checked'; } ?> > Clash of Kings
 					</div>
 					<div class="choi">
-						<input type="radio" name="Son" value="King"> Clash of King
+						<input type="radio" name="Son" value="King" <?php if($cookie['Son'] === 'Kings') { echo 'checked'; } ?> > Clash of Kings
 					</div>
 			
 				</div>
 			
 			</div>
 			
-			<div>
-				<h3> Volume </h3>
-				
-				<audio controls> </audio> 
-			</div>
-		
-		
-			
-		
 		</div>
 	
 	</div>
@@ -124,26 +108,19 @@
 				<div class="choix">
 				
 					<div class="choi">
-						<input type="radio" name="Langue" value="Francais"> Français
+						<input type="radio" name="Langue" value="Francais" <?php if($cookie['Langue'] === 'Francais') { echo 'checked'; } ?> > Français
 					</div>
 					<div class="choi">
-						<input type="radio" name="Langue" value="Anglais"> Anglais
+						<input type="radio" name="Langue" value="Anglais" <?php if($cookie['Langue'] === 'Anglais') { echo 'checked'; } ?> > Anglais
 					</div>
 			
 				</div>
 			
 			</div>
-			
-			<div>
-				<h3> Volume </h3>
-				
-				<audio controls> </audio> 
-			</div>
-		
-		
-			
 		
 		</div>
+	
+	</div>
 	
 	</div>
 	
@@ -160,33 +137,33 @@
 				
 					<li>
 						<label>
-							<input type="radio" name="Theme" value="Light1">
-								<img src="image/header.jpeg">
+							<input type="radio" name="Theme" value="Light1" <?php if($cookie['Theme'] === 'Light1') { echo 'checked'; } ?>>
+								<img class="imageTheme" src="OldWarriorsLight1.png">
 					</li>
 					<li>
 						<label>
-							<input type="radio" name="Theme" value="Light2">
-								<img src="image/header.jpeg">
+							<input type="radio" name="Theme" value="Light2" <?php if($cookie['Theme'] === 'Light2') { echo 'checked'; } ?>>
+								<img class="imageTheme" src="OldWarriorsLight2.png">
 					</li>
 					<li>
 						<label>
-							<input type="radio" name="Theme" value="LightRed">
-								<img src="image/header.jpeg">
+							<input type="radio" name="Theme" value="LightRed" <?php if($cookie['Theme'] === 'LightRed') { echo 'checked'; } ?>>
+								<img class="imageTheme" src="OldWarriorsLightRed.png">
 					</li>
 					<li>
 						<label>
-							<input type="radio" name="Theme" value="Dark1">
-								<img src="image/header.jpeg">
+							<input type="radio" name="Theme" value="Dark1" <?php if($cookie['Theme'] === 'Dark1') { echo 'checked'; } ?>>
+								<img class="imageTheme" src="OldWarriorsDark1.png">
 					</li>
 					<li>
 						<label>
-							<input type="radio" name="Theme" value="Dark2">
-								<img src="image/header.jpeg">
+							<input type="radio" name="Theme" value="Dark2" <?php if($cookie['Theme'] === 'Dark2') { echo 'checked'; } ?>>
+								<img class="imageTheme" src="OldWarriorsDark2.png">
 					</li>
 					<li>
 						<label>
-							<input type="radio" name="Theme" value="DarkRed">
-								<img src="image/header.jpeg">
+							<input type="radio" name="Theme" value="DarkRed" <?php if($cookie['Theme'] === 'DarkRed') { echo 'checked'; } ?>>
+								<img class="imageTheme" src="OldWarriorsDarkRed.png">
 					</li>
 				</ul>
 				
@@ -196,8 +173,12 @@
 	
 	</div>
 	
-	<button type="submit" onclick="reload();"> Sauvegarder les  Changements </button>
-
+	<div class="Button">
+	
+		<button class="w3-button submitButton" type="submit" onclick="reload();"> Sauvegarder les  Changements </button>
+	
+	</div>
+	
 </div>
 
 </form>

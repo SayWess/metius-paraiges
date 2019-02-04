@@ -5,7 +5,7 @@
 	include "Templates/head.php"; 
 
 ?>
-<body>
+<body onload="musicFond(music);">
 
 <?php 
 	
