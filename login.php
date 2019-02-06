@@ -26,8 +26,6 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 
 ?>
 
-<body onload="musicFond(music);">
-
 <?php 
 	
 	include "Templates/header.php";   //On inclue le fichier qui contient l'image d'en tête

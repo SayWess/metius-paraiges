@@ -4,9 +4,7 @@
 	$cssFile = "profil";
 	include "Templates/head.php"; 
 
-?>
-
-<body onload="musicFond(music);">                                                                                                             <!--  En-tête de page (image)  -->
+?>                                                                                                         <!--  En-tête de page (image)  -->
 
 <?php 
 	

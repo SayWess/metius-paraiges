@@ -11,8 +11,7 @@
 	include "Templates/head.php"; 
 
 ?>
-<body >
-<!--onload="musicFond()"-->
+
 <?php 
 	
 	include "Templates/header.php";   //On inclue le fichier qui contient l'image d'en tête

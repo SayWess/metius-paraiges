@@ -1,11 +1,11 @@
 <!DOCTYPE html>
+
 <?php 
 
 	$cssFile = "recrutement";
 	include "Templates/head.php"; 
 
 ?>
-<body onload="musicFond(music);">
 
 <?php 
 	

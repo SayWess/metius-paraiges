@@ -18,7 +18,6 @@ session_start();
 	include "Templates/head.php"; 
 
 ?>
-<body>
 
 <?php 
 	

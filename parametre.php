@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 
-<?php 
-
-	$cookie = json_decode($_COOKIE['metius-settings'], true);
+<?php
 
 	$cssFile = "parametre";
 	include "Templates/head.php"; 
@@ -27,8 +25,8 @@
 	<div class="containerD">
 		
 		<div class="borderDiv">
-		<button type="button" class="buttonSon w3-btn w3-cercle" onclick="pauses()"> <img class="Son" src="image/audio_off.png" alt="active"> </button>
 		<h1 class="text-left"> Musiques </h1>
+		<button type="button" id="Music-Button" class="buttonSon w3-btn w3-cercle" onclick="pauses()"> <i class="material-icons">play_arrow</i> </button>
 		</div>
 		
 		<div class="choixMusiques"> 
@@ -38,15 +36,18 @@
 				<h3 class="sous-titre"> Quelle musique de fond voulez-vous ? </h3>
 			
 				<div class="choix">
-					
-					<div class="choi">
-						<input type="radio" name="Music" value="Clash of Kings" <?php if($cookie['Music'] === 'Clash of Kings') { echo 'checked'; } ?> > Clash of Kings
+						
+					<div>
+						<input id="musique 1" type="radio" name="Music" value="Clash of Kings" <?php if($cookie['Music'] === 'Clash of Kings') { echo 'checked'; } ?> >
+						<label for="musique 1" class="choi"> <i class="material-icons"></i> Clash of Kings </label>
 					</div>
-					<div class="choi">
-						<input type="radio" name="Music" value="Clash Of" <?php if($cookie['Music'] === 'Clash Of') { echo 'checked'; } ?> > Clash of Kings
+					<div>
+						<input id="musique 2" type="radio" name="Music" value="Clash Of" <?php if($cookie['Music'] === 'Clash Of') { echo 'checked'; } ?> >
+						<label for="musique 2" class="choi"> <i class="material-icons"></i> Clash of Kings </label>
 					</div>
-					<div class="choi">
-						<input type="radio" name="Music" value="Clash Kings" <?php if($cookie['Music'] === 'Clash Kings') { echo 'checked'; } ?> > Clash of Kings
+					<div>
+						<input id="musique 3" type="radio" name="Music" value="Clash Kings" <?php if($cookie['Music'] === 'Clash Kings') { echo 'checked'; } ?> >
+						<label for="musique 3" class="choi"> <i class="material-icons"></i> Clash of Kings </label>
 					</div>
 					
 				</div>
@@ -60,8 +61,8 @@
 	<div class="containerD">
 		
 		<div class="borderDiv">
-		<button class="buttonSon w3-btn w3-cercle"> <img class="Son" src="image/audio_off.png" alt="active"> </button>
-		<h1 class="text-left"> Son boutons </h1>
+		<h1 class="text-left">Son boutons </h1>
+		<button class="buttonSon w3-btn w3-cercle"><i class="material-icons">volume_up</i>  </button>
 		</div>
 		
 		<div class="choixMusiques"> 
@@ -72,17 +73,21 @@
 			
 				<div class="choix">
 				
-					<div class="choi">
-						<input type="radio" name="Son" value="Clash of Kings" <?php if($cookie['Son'] === 'Clash of Kings') { echo 'checked'; } ?> > Clash of Kings
+					<div>
+						<input id="son 1" type="radio" name="Son" value="Clash of Kings" <?php if($cookie['Son'] === 'Clash of Kings') { echo 'checked'; } ?> >
+						<label for="son 1" class="choi"> <i class="material-icons"></i> Clash of Kings </label>
 					</div>
-					<div class="choi">
-						<input type="radio" name="Son" value="Clash of" <?php if($cookie['Son'] === 'Clash of') { echo 'checked'; } ?> > Clash of Kings
+					<div>
+						<input id="son 2" type="radio" name="Son" value="Clash of" <?php if($cookie['Son'] === 'Clash of') { echo 'checked'; } ?> >
+						<label for="son 2" class="choi"> <i class="material-icons"></i> Clash of </label>
 					</div>
-					<div class="choi">
-						<input type="radio" name="Son" value="Clash" <?php if($cookie['Son'] === 'Clash') { echo 'checked'; } ?> > Clash of Kings
+					<div>
+						<input id="son 3" type="radio" name="Son" value="Clash" <?php if($cookie['Son'] === 'Clash') { echo 'checked'; } ?> >
+						<label for="son 3" class="choi"> <i class="material-icons"></i> Clash </label>
 					</div>
-					<div class="choi">
-						<input type="radio" name="Son" value="King" <?php if($cookie['Son'] === 'Kings') { echo 'checked'; } ?> > Clash of Kings
+					<div>
+						<input id="son 4" type="radio" name="Son" value="Kings" <?php if($cookie['Son'] === 'Kings') { echo 'checked'; } ?> >
+						<label for="son 4" class="choi"> <i class="material-icons"></i> Kings </label>
 					</div>
 			
 				</div>
@@ -92,7 +97,7 @@
 		</div>
 	
 	</div>
-	
+
 	<div class="containerD">
 		
 		<div class="borderDiv">
@@ -107,11 +112,13 @@
 			
 				<div class="choix">
 				
-					<div class="choi">
-						<input type="radio" name="Langue" value="Francais" <?php if($cookie['Langue'] === 'Francais') { echo 'checked'; } ?> > Français
+					<div>
+						<input id="francais" type="radio" name="Langue" value="Francais" <?php if($cookie['Langue'] === 'Francais') { echo 'checked'; } ?> >
+						<label for="francais" class="choi"> <i class="material-icons"></i> Français </label>
 					</div>
-					<div class="choi">
-						<input type="radio" name="Langue" value="Anglais" <?php if($cookie['Langue'] === 'Anglais') { echo 'checked'; } ?> > Anglais
+					<div>
+						<input id="anglais" type="radio" name="Langue" value="Anglais" <?php if($cookie['Langue'] === 'Anglais') { echo 'checked'; } ?> >
+						<label for="anglais" class="choi"> <i class="material-icons"></i> Anglais </label>
 					</div>
 			
 				</div>
@@ -203,6 +210,17 @@ document.querySelector('.js-form').addEventListener('submit', event => {
 	settings = Object.assign(cookie, settings);
     setCookie('metius-settings', JSON.stringify(settings), 365);
 });
+
+var isMusicPaused = getSettings('isMusicPaused');
+if(isMusicPaused == false) {
+	document.getElementById('Music-Button').style.backgroundImage = 'linear-gradient(135deg, rgba(255,0,0,.4), rgba(255, 0, 0, 0))';
+	document.getElementById('Music-Button').style.borderColor = '#c00';
+} else if(isMusicPaused == true){
+	document.getElementById('Music-Button').style.backgroundImage = 'linear-gradient(135deg, rgba(0,255,0,.3), rgba(255, 0, 0, 0))';
+	document.getElementById('Music-Button').style.borderColor = '#060';
+}
+
+
 
 </script>
 
