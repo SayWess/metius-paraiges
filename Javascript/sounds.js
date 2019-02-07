@@ -1,10 +1,6 @@
-function sound() {
-	var audio = new Audio('Sounds/button_click.ogg'); 
- 	audio.play();
- }
-  
 var audio = new Audio("Sounds/" + music + '.mp3'); 
 var isMusicPaused = getSettings('isMusicPaused');
+var sound = getSettings('isSonOn');
 
 function musicFond(music, status) {
 	if(isMusicPaused == true) {
@@ -18,24 +14,62 @@ function reload() {
 	location.reload();
 }
 
-var play = isMusicPaused;
-
 function pauses() {
-	play = !play;
-	if(play == false) {
+	isMusicPaused = !isMusicPaused;
+	if(isMusicPaused == false) {
 		audio.pause();
-		updateCookie('isMusicPaused', play);
+		updateCookie('isMusicPaused', isMusicPaused);
 		updateCookie('CurrentTimeMusic', audio.currentTime);
-		$('#Music-Button').css('background-image', 'linear-gradient(135deg, rgba(255,0,0,.4), rgba(255, 0, 0, 0))')
-		document.getElementById('Music-Button').style.borderColor = '#c00';
-	} else if(play == true) {
+		document.querySelector('.Music-Button').classList.remove('Music-Button--play');
+		document.querySelector('.Music-Button').classList.add('Music-Button--paused');
+	} else if(isMusicPaused == true) {
 		audio.play();
-		updateCookie('isMusicPaused', play);
+		updateCookie('isMusicPaused', isMusicPaused);
 		updateCookie('CurrentTimeMusic', audio.currentTime);
-		document.getElementById('Music-Button').style.backgroundImage = 'linear-gradient(135deg, rgba(0,255,0,.3), rgba(255, 0, 0, 0))';
-		document.getElementById('Music-Button').style.borderColor = '#060';
+		document.querySelector('.Music-Button').classList.remove('Music-Button--paused');
+		document.querySelector('.Music-Button').classList.add('Music-Button--play');
 	}
 }
+
+// function savedMusicParameter() {
+// 	if(isMusicPaused == true) {
+// 		document.querySelector('.Music-Button').classList.remove('Music-Button--paused');
+// 		document.querySelector('.Music-Button').classList.add('Music-Button--play');
+// 	} else if(isMusicPaused == false) {
+// 		document.querySelector('.Music-Button').classList.remove('Music-Button--play');
+// 		document.querySelector('.Music-Button').classList.add('Music-Button--paused');
+// 	}
+// }
+
+function sound() {
+	var audio = new Audio('Sounds/button_click.ogg'); 
+ 	audio.play();
+ }
+
+function Sound() {
+	sound = !sound;
+	if(sound == false) {
+		updateCookie('isSonOn', sound);
+		document.querySelector('.Sound-Button').classList.remove('Sound-Button--on');
+		document.querySelector('.Sound-Button').classList.add('Sound-Button--off');
+	} else if(sound == true) {
+		updateCookie('isSonOn', sound);
+		document.querySelector('.Sound-Button').classList.remove('Sound-Button--off');
+		document.querySelector('.Sound-Button').classList.add('Sound-Button--on');
+	}
+}
+
+// function savedSoundParameter() {
+// 	if(sound == true) {
+// 		document.querySelector('.Sound-Button').classList.remove('Sound-Button--off');
+// 		document.querySelector('.Sound-Button').classList.add('Sound-Button--on');
+// 	} else if(sound == false) {
+// 		document.querySelector('.Sound-Button').classList.remove('Sound-Button--on');
+// 		document.querySelector('.Sound-Button').classList.add('Sound-Button--off');
+// 	}
+// }
+// 
+// savedSoundParameter();
 
 function currentTimer() {
 	updateCookie('CurrentTimeMusic', audio.currentTime);

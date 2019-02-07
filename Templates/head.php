@@ -4,6 +4,7 @@
             'Music' => 'Clash of Kings',
             'Langue' => 'Francais',
             'Son' => 'Clash',
+            'isSonOn' => true,
             'isMusicPaused' => false,
             'CurrentTimeMusic' => 0,
             'Theme' => 'Light1',
@@ -47,6 +48,7 @@ if(isset($_COOKIE['metius-settings'])) {
 			Music: 'Clash of Kings',
 			Langue: 'francais',
 			Son: 'Clash',
+			isSonOn: true,
 			isMusicPaused: false,
 			Themes: 'Light1',
 			CurrentTimeMusic: 0,
@@ -74,7 +76,7 @@ if(isset($_COOKIE['metius-settings'])) {
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">                                                                           <!--  Utilisation Boostrap et W3.css  -->
   <link rel="stylesheet" href="<?php echo $cssFile ?>.css" type="text/css">
   <link rel="stylesheet" href="CSS/Navigation/navigation.css" type="text/css">
-  <link rel="stylesheet" href='http://fonts.googleapis.com/icon?family=Material+Icons' type="text/css">
+  <link rel="stylesheet" href='https://fonts.googleapis.com/icon?family=Material+Icons' type="text/css">
   <link rel="icon" href="image/ImageClan.jpeg" type="image/jpeg">
 
 

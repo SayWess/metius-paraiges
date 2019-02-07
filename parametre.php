@@ -26,7 +26,7 @@
 		
 		<div class="borderDiv">
 		<h1 class="text-left"> Musiques </h1>
-		<button type="button" id="Music-Button" class="buttonSon w3-btn w3-cercle" onclick="pauses()"> <i class="material-icons">play_arrow</i> </button>
+		<button id="Music-Button" class="buttonSon w3-btn w3-cercle Music-Button" onclick="pauses()"> <i class="material-icons">play_arrow</i> </button>
 		</div>
 		
 		<div class="choixMusiques"> 
@@ -62,7 +62,7 @@
 		
 		<div class="borderDiv">
 		<h1 class="text-left">Son boutons </h1>
-		<button class="buttonSon w3-btn w3-cercle"><i class="material-icons">volume_up</i>  </button>
+		<button class="buttonSon w3-btn w3-cercle Sound-Button" onclick="Sound()"><i class="material-icons">volume_up</i>  </button>
 		</div>
 		
 		<div class="choixMusiques"> 
@@ -211,12 +211,16 @@ document.querySelector('.js-form').addEventListener('submit', event => {
     setCookie('metius-settings', JSON.stringify(settings), 365);
 });
 
-var isMusicPaused = getSettings('isMusicPaused');
+if(sound == true) {
+	document.querySelector('.Sound-Button').classList.add('Sound-Button--on');
+} else if(sound == false) {
+	document.querySelector('.Sound-Button').classList.add('Sound-Button--off');
+}
 
-if(isMusicPaused) {
+if(isMusicPaused == true) {
 	document.querySelector('.Music-Button').classList.add('Music-Button--play');
-} else {
-    document.querySelector('.Music-Button').classList.add('Music-Button--paused');
+} else if(isMusicPaused == false) {
+	document.querySelector('.Music-Button').classList.add('Music-Button--paused');
 }
 
 
