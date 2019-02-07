@@ -212,14 +212,12 @@ document.querySelector('.js-form').addEventListener('submit', event => {
 });
 
 var isMusicPaused = getSettings('isMusicPaused');
-if(isMusicPaused == false) {
-	document.getElementById('Music-Button').style.backgroundImage = 'linear-gradient(135deg, rgba(255,0,0,.4), rgba(255, 0, 0, 0))';
-	document.getElementById('Music-Button').style.borderColor = '#c00';
-} else if(isMusicPaused == true){
-	document.getElementById('Music-Button').style.backgroundImage = 'linear-gradient(135deg, rgba(0,255,0,.3), rgba(255, 0, 0, 0))';
-	document.getElementById('Music-Button').style.borderColor = '#060';
-}
 
+if(isMusicPaused) {
+	document.querySelector('.Music-Button').classList.add('Music-Button--play');
+} else {
+    document.querySelector('.Music-Button').classList.add('Music-Button--paused');
+}
 
 
 </script>
