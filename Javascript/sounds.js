@@ -1,8 +1,9 @@
 var audio = new Audio("Sounds/" + music + '.mp3'); 
 var isMusicPaused = getSettings('isMusicPaused');
 var sound = getSettings('isSonOn');
+var SoundName = getSettings('Son');
 
-function musicFond(music, status) {
+function musicFond(music) {
 	if(isMusicPaused == true) {
 		var currentTime = getSettings('CurrentTimeMusic');
 		audio.play();
@@ -31,19 +32,11 @@ function pauses() {
 	}
 }
 
-// function savedMusicParameter() {
-// 	if(isMusicPaused == true) {
-// 		document.querySelector('.Music-Button').classList.remove('Music-Button--paused');
-// 		document.querySelector('.Music-Button').classList.add('Music-Button--play');
-// 	} else if(isMusicPaused == false) {
-// 		document.querySelector('.Music-Button').classList.remove('Music-Button--play');
-// 		document.querySelector('.Music-Button').classList.add('Music-Button--paused');
-// 	}
-// }
-
-function sound() {
-	var audio = new Audio('Sounds/button_click.ogg'); 
- 	audio.play();
+function LinkSound() {
+	if(sound) {
+		var audio = new Audio('Sounds/' + SoundName + '.ogg'); 
+		audio.play();
+	}
  }
 
 function Sound() {
@@ -58,18 +51,6 @@ function Sound() {
 		document.querySelector('.Sound-Button').classList.add('Sound-Button--on');
 	}
 }
-
-// function savedSoundParameter() {
-// 	if(sound == true) {
-// 		document.querySelector('.Sound-Button').classList.remove('Sound-Button--off');
-// 		document.querySelector('.Sound-Button').classList.add('Sound-Button--on');
-// 	} else if(sound == false) {
-// 		document.querySelector('.Sound-Button').classList.remove('Sound-Button--on');
-// 		document.querySelector('.Sound-Button').classList.add('Sound-Button--off');
-// 	}
-// }
-// 
-// savedSoundParameter();
 
 function currentTimer() {
 	updateCookie('CurrentTimeMusic', audio.currentTime);

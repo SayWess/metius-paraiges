@@ -92,50 +92,83 @@ h6 {
 	font-size: 24px;
 	padding-left: 10px;
 }
-.borderDiv .material-icons {
-	color: #c00;
+.borderDiv button .material-icons {
+	color: #069;
 	font-size: 31px;
+	width: 31px;
 	padding-left: 0px;
 }
-.borderDiv .material-icons:hover {
-	color: #060;
+
+/*.Music-Button--paused i.material-icons:hover {
+	color: blueviolet;
 	transition: all 0.2s ease;
-}
+}*/
 
 .buttonSon {
 	background: transparent;
-	border: none;
 	padding: 2px;
-	border: 1px solid #c00;
+	border: 1px solid;
 	border-radius: 4px;
 	height: 36px;
 	margin-left: 10px;
 	transition: all 0.2s ease;
-}
-
-.buttonSon:hover {
-    background-image: linear-gradient(135deg, rgba(0,255,0,.3), rgba(255, 0, 0, 0));
-	border-color: #060;
+	width: 37px;
 }
 
 .Sound-Button--off {
-	background-image: linear-gradient(135deg, rgba(255,0,0,.4), rgba(255, 0, 0, 0));
-	border-color: #c00;
+	background-image: linear-gradient(135deg, rgba(0,102,153,0.5), rgba(0,102,153,.1));
+    border-color: #069;
+}
+
+.Sound-Button--off .material-icons::before {
+	content: "volume_off";
+}
+
+.Sound-Button--off:hover {
+	background-image: linear-gradient(135deg, hsl(200, 100%, 40%, 0.5), hsl(200, 100%, 40%,0));
+    border-color: hsl(200, 100%, 40%);
 }
 
 .Sound-Button--on {
-	background-image: linear-gradient(135deg, rgba(0,255,0,.3), rgba(255, 0, 0, 0));
-	border-color: #060;
+	background-image: linear-gradient(135deg, rgba(0,102,153,0.5), rgba(0,102,153,.1));
+    border-color: #069;
+}
+
+.Sound-Button--on .material-icons::before {
+	content: "volume_up";
+}
+
+.Sound-Button--on:hover {
+	background-image: linear-gradient(135deg, hsl(200, 100%, 40%, 0.5), hsl(200, 100%, 40%,0));
+    border-color: hsl(200, 100%, 40%);
 }
 
 .Music-Button--paused {
-	background-image: linear-gradient(135deg, rgba(255,0,0,.4), rgba(255, 0, 0, 0));
-	border-color: #c00;
+	background-image: linear-gradient(135deg, rgba(0,102,153,0.5), rgba(0,102,153,0));
+    border-color: #069;
+}
+
+.Music-Button--paused .material-icons::before {
+	content: "play_arrow";
+}
+
+.Music-Button--paused:hover {
+	background-image: linear-gradient(135deg, hsl(200, 100%, 40%, 0.5), hsl(200, 100%, 40%,0));
+    border-color: hsl(200, 100%, 40%);
 }
 
 .Music-Button--play {
-	background-image: linear-gradient(135deg, rgba(0,255,0,.3), rgba(255, 0, 0, 0));
-	border-color: #060;
+	background-image: linear-gradient(135deg, rgba(0,102,153,0.5), rgba(0,102,153,0));
+    border-color: #069;
+}
+
+.Music-Button--play .material-icons::before {
+	content: "pause_arrow";
+}
+
+.Music-Button--play:hover {
+	background-image: linear-gradient(135deg, hsl(200, 100%, 40%, 0.5), hsl(200, 100%, 40%,0));
+    border-color: hsl(200, 100%, 40%);
 }
 
 .Groupe-musique {
@@ -146,12 +179,15 @@ h6 {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	flex-grow: 1;
 	padding: 2rem 10px;
 }
 
 .choixMusiques {
 	background-color: grey;
 	flex-grow: 1;
+	display: flex; 
+	flex-direction: column;
 }
 
 .choixMusiques h3 {
@@ -190,7 +226,8 @@ h6 {
   height: 40px;
 }
 
-.choi:hover {
+.choi:hover,
+.choi:focus {
   background: rgba(255,255,255,0.3);
   color: #069;
 }
@@ -236,13 +273,32 @@ input:checked + .choi .material-icons::before {
 }
 
 .Button {
-	text-align: center;
+	display: flex;
+	justify-content: center;
 }
 
 .submitButton {
 	background-color: green;
-	padding: 2rem;
-	font-size: 20px;
+    background-image: linear-gradient(135deg, #090, #080);
+    padding: 1rem 1rem;
+	margin-top: 2rem;
+    font-size: 20px;
+    border-radius: 4px;
+    border: 1px solid #0b0;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+	display: flex;
+	align-items: center;
+}
+
+.submitButton:hover,
+.submitButton:focus {
+    background-image: linear-gradient(135deg, #0a0, #090);
+	border: 1px solid #0a0;
+}
+
+.submitButton i.material-icons {
+	font-size: 30px;
+	padding: 5px;
 }
 
 /*********************************************************************************/

@@ -31,26 +31,26 @@
 
 
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">                                                                                           <!--  Barre de navigation avec bootstrap  -->
-  <a class="navbar-brand" href="index.php" onclick="sound(); currentTimer()">Home</a>
+  <a class="navbar-brand" href="index.php" onclick="LinkSound()">Home</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link<?php echo $clan ?>" href="clan.php" onclick="sound(); currentTimer()">Clan</a>                                             <!--  "linkactive" signifie que c'est le lien actif, pour que l'utilisateur repère sur quelle page il est  -->
+        <a class="nav-link<?php echo $clan ?>" href="clan.php" onclick="LinkSound()">Clan</a>                                             <!--  "linkactive" signifie que c'est le lien actif, pour que l'utilisateur repère sur quelle page il est  -->
       </li>
       <li class="nav-item">
-        <a class="nav-link<?php echo $reglement ?>" href="reglement.php" onclick="sound(); currentTimer()">Règlement</a>
+        <a class="nav-link<?php echo $reglement ?>" href="reglement.php" onclick="LinkSound()">Règlement</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link<?php echo $recrutement ?>" href="recrutement.php" onclick="sound(); currentTimer()">Recrutement</a>
+        <a class="nav-link<?php echo $recrutement ?>" href="recrutement.php" onclick="LinkSound()">Recrutement</a>
       </li>    
       <li class="nav-item">
-        <a class="nav-link<?php echo $admin ?>" href="login.php" onclick="sound(); currentTimer()">Espace Admin</a>
+        <a class="nav-link<?php echo $admin ?>" href="login.php" onclick="LinkSound()">Espace Admin</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link<?php echo $oldwarriors ?>" href="oldWarriors.php" onclick="sound(); currentTimer()">Les disparus</a>
+        <a class="nav-link<?php echo $oldwarriors ?>" href="oldWarriors.php" onclick="LinkSound()">Les disparus</a>
       </li>
     </ul>
   </div> 
@@ -59,13 +59,13 @@
 		if($deconnection == "true") {
 		?>
 		<li class="nav-item">
-			<a class='navbar-brand' href='logout.php' onclick="sound(); currentTimer()">Se déconnecter</a>
+			<a class='navbar-brand' href='logout.php' onclick="LinkSound()">Se déconnecter</a>
 		</li>
 		<?php
 		}
       ?>
 		<li class="nav-item">
-			<a class='navbar-brand' href='parametre.php' onclick="sound(); currentTimer()"><img class="parametre" src="image/parametre.png" alt="Paramètres"></a>
+			<a class='navbar-brand' href='parametre.php' onclick="LinkSound()"><img class="parametre" src="image/parametre.png" alt="Paramètres"></a>
 		</li>
 </nav> 
 

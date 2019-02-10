@@ -26,7 +26,7 @@
 		
 		<div class="borderDiv">
 		<h1 class="text-left"> Musiques </h1>
-		<button id="Music-Button" class="buttonSon w3-btn w3-cercle Music-Button" onclick="pauses()"> <i class="material-icons">play_arrow</i> </button>
+		<button id="Music-Button" class="buttonSon w3-btn w3-cercle Music-Button" onclick="pauses()"> <i class="material-icons"></i> </button>
 		</div>
 		
 		<div class="choixMusiques"> 
@@ -38,15 +38,15 @@
 				<div class="choix">
 						
 					<div>
-						<input id="musique 1" type="radio" name="Music" value="Clash of Kings" <?php if($cookie['Music'] === 'Clash of Kings') { echo 'checked'; } ?> >
-						<label for="musique 1" class="choi"> <i class="material-icons"></i> Clash of Kings </label>
+						<input id="musique 1" type="radio" name="Music" value="Clash royale" <?php if($cookie['Music'] === 'Clash royale') { echo 'checked'; } ?> >
+						<label for="musique 1" class="choi"> <i class="material-icons"></i> Clash royale </label>
 					</div>
 					<div>
-						<input id="musique 2" type="radio" name="Music" value="Clash Of" <?php if($cookie['Music'] === 'Clash Of') { echo 'checked'; } ?> >
-						<label for="musique 2" class="choi"> <i class="material-icons"></i> Clash of Kings </label>
+						<input id="musique 2" type="radio" name="Music" value="Clash royale battle" <?php if($cookie['Music'] === 'Clash royale battle') { echo 'checked'; } ?> >
+						<label for="musique 2" class="choi"> <i class="material-icons"></i> Clash Royale battle </label>
 					</div>
 					<div>
-						<input id="musique 3" type="radio" name="Music" value="Clash Kings" <?php if($cookie['Music'] === 'Clash Kings') { echo 'checked'; } ?> >
+						<input id="musique 3" type="radio" name="Music" value="Clash of Kings" <?php if($cookie['Music'] === 'Clash of Kings') { echo 'checked'; } ?> >
 						<label for="musique 3" class="choi"> <i class="material-icons"></i> Clash of Kings </label>
 					</div>
 					
@@ -62,7 +62,7 @@
 		
 		<div class="borderDiv">
 		<h1 class="text-left">Son boutons </h1>
-		<button class="buttonSon w3-btn w3-cercle Sound-Button" onclick="Sound()"><i class="material-icons">volume_up</i>  </button>
+		<button class="buttonSon w3-btn w3-cercle Sound-Button" onclick="Sound()"><i class="material-icons"></i>  </button>
 		</div>
 		
 		<div class="choixMusiques"> 
@@ -74,20 +74,20 @@
 				<div class="choix">
 				
 					<div>
-						<input id="son 1" type="radio" name="Son" value="Clash of Kings" <?php if($cookie['Son'] === 'Clash of Kings') { echo 'checked'; } ?> >
-						<label for="son 1" class="choi"> <i class="material-icons"></i> Clash of Kings </label>
+						<input id="son 1" type="radio" name="Son" value="Button Click 1" <?php if($cookie['Son'] === 'Button Click 1') { echo 'checked'; } ?> >
+						<label for="son 1" class="choi"> <i class="material-icons"></i> Son 1 </label>
 					</div>
 					<div>
-						<input id="son 2" type="radio" name="Son" value="Clash of" <?php if($cookie['Son'] === 'Clash of') { echo 'checked'; } ?> >
-						<label for="son 2" class="choi"> <i class="material-icons"></i> Clash of </label>
+						<input id="son 2" type="radio" name="Son" value="Button Click 2" <?php if($cookie['Son'] === 'Button Click 2') { echo 'checked'; } ?> >
+						<label for="son 2" class="choi"> <i class="material-icons"></i> Son 2 </label>
 					</div>
 					<div>
-						<input id="son 3" type="radio" name="Son" value="Clash" <?php if($cookie['Son'] === 'Clash') { echo 'checked'; } ?> >
-						<label for="son 3" class="choi"> <i class="material-icons"></i> Clash </label>
+						<input id="son 3" type="radio" name="Son" value="Button Click 3" <?php if($cookie['Son'] === 'Button Click 3') { echo 'checked'; } ?> >
+						<label for="son 3" class="choi"> <i class="material-icons"></i> Son 3 </label>
 					</div>
 					<div>
-						<input id="son 4" type="radio" name="Son" value="Kings" <?php if($cookie['Son'] === 'Kings') { echo 'checked'; } ?> >
-						<label for="son 4" class="choi"> <i class="material-icons"></i> Kings </label>
+						<input id="son 4" type="radio" name="Son" value="Button Click 4" <?php if($cookie['Son'] === 'Button Click 4') { echo 'checked'; } ?> >
+						<label for="son 4" class="choi"> <i class="material-icons"></i> Son 4 </label>
 					</div>
 			
 				</div>
@@ -145,32 +145,32 @@
 					<li>
 						<label>
 							<input type="radio" name="Theme" value="Light1" <?php if($cookie['Theme'] === 'Light1') { echo 'checked'; } ?>>
-								<img class="imageTheme" src="OldWarriorsLight1.png">
+								<img class="imageTheme" src="CSS/OldWarriors/OldWarriorsLight1.png">
 					</li>
 					<li>
 						<label>
 							<input type="radio" name="Theme" value="Light2" <?php if($cookie['Theme'] === 'Light2') { echo 'checked'; } ?>>
-								<img class="imageTheme" src="OldWarriorsLight2.png">
+								<img class="imageTheme" src="CSS/OldWarriors/OldWarriorsLight2.png">
 					</li>
 					<li>
 						<label>
 							<input type="radio" name="Theme" value="LightRed" <?php if($cookie['Theme'] === 'LightRed') { echo 'checked'; } ?>>
-								<img class="imageTheme" src="OldWarriorsLightRed.png">
+								<img class="imageTheme" src="CSS/OldWarriors/OldWarriorsLightRed.png">
 					</li>
 					<li>
 						<label>
 							<input type="radio" name="Theme" value="Dark1" <?php if($cookie['Theme'] === 'Dark1') { echo 'checked'; } ?>>
-								<img class="imageTheme" src="OldWarriorsDark1.png">
+								<img class="imageTheme" src="CSS/OldWarriors/OldWarriorsDark1.png">
 					</li>
 					<li>
 						<label>
 							<input type="radio" name="Theme" value="Dark2" <?php if($cookie['Theme'] === 'Dark2') { echo 'checked'; } ?>>
-								<img class="imageTheme" src="OldWarriorsDark2.png">
+								<img class="imageTheme" src="CSS/OldWarriors/OldWarriorsDark2.png">
 					</li>
 					<li>
 						<label>
 							<input type="radio" name="Theme" value="DarkRed" <?php if($cookie['Theme'] === 'DarkRed') { echo 'checked'; } ?>>
-								<img class="imageTheme" src="OldWarriorsDarkRed.png">
+								<img class="imageTheme" src="CSS/OldWarriors/OldWarriorsDarkRed.png">
 					</li>
 				</ul>
 				
@@ -182,7 +182,7 @@
 	
 	<div class="Button">
 	
-		<button class="w3-button submitButton" type="submit" onclick="reload();"> Sauvegarder les  Changements </button>
+		<button class="submitButton" type="submit" onclick="reload();"> <i class="material-icons">save_alt</i> Sauvegarder les changements </button>
 	
 	</div>
 	

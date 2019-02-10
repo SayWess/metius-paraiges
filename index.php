@@ -56,74 +56,29 @@
   </div>
 </div>
 
-<!--<audio src="Sounds/One Piece Epic Music.mp3"  controls></audio> -->
-
-
 <?php 
 
-$joueurLeave = file_get_contents("JSON/oldWarriorsCopy.json");
-$joueurLeave = json_decode($joueurLeave, true);
+$jOld = file_get_contents("JSON/newOldWarrior.json");
+$jOld = json_decode($jOld, true);
 
-$oldWarriors = file_get_contents("JSON/oldWarriors.json");
-$oldWarriors = json_decode($oldWarriors, true);
-
-$jOld = [];
-
-function array_diff_assoc_recursive($array1, $array2) {
-    $difference=array();
-    foreach($array1 as $key => $value) {
-        if( is_array($value) ) {
-            if( !isset($array2[$key]) || !is_array($array2[$key]) ) {
-                $difference[$key] = $value;
-            } else {
-                $new_diff = array_diff_assoc_recursive($value, $array2[$key]);
-                if( !empty($new_diff) )
-                    $difference[$key] = $new_diff;
-            }
-        } else if( !array_key_exists($key,$array2) || $array2[$key] !== $value ) {
-            $difference[$key] = $value;
-        }
-    }
-    return $difference;
-}
-$nouvOld = array_diff_assoc_recursive($oldWarriors, $joueurLeave);
-
-$dates = "";
-
- foreach($nouvOld as $key => $date) {
-	foreach($date as $tags) {
-		$dates = key($date);
-		foreach($tags as $tag) {
- 		$fichierJ = file_get_contents("JSON/joueurProfil/$tag.json");
- 		$fichierJ = json_decode($fichierJ);
-		$jOld[] = $fichierJ->name;
-		}
-	}
-}
- 
-
+$date = date('W|y');
 
 if(!is_null($jOld)) {
 	?>
-	<!--<div> 
-		<h1> Bon départ à <?php echo join(', ', $jOld)." le ".$dates ?>  </h1>
+	<div> 
+		<h1> Bon départ à <?php echo join(', ', $jOld[$date])." le ".key($jOld) ?>  </h1>
 	
-	</div>-->
+	</div>
 	
 	
 	<?php
 }
 
-
-
-
-
-
-
-
-
-
 ?>
+
+<div> 
+	<h1> Bon départ à CFD le 06|19 </h1>
+</div>
 
 <div class="jumbotron footer">
   <p>Auteur : SayWess | Dernière modification: 2018-12-27</p>

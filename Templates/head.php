@@ -1,9 +1,9 @@
 <?php 
 	
 	$cookie = [
-            'Music' => 'Clash of Kings',
+            'Music' => 'Clash royale',
             'Langue' => 'Francais',
-            'Son' => 'Clash',
+            'Son' => 'Button Click 1',
             'isSonOn' => true,
             'isMusicPaused' => false,
             'CurrentTimeMusic' => 0,
@@ -17,6 +17,9 @@ if(isset($_COOKIE['metius-settings'])) {
 }
 
 ?>
+
+<html lang="fr">
+<head>
 
 <script>
 
@@ -45,9 +48,9 @@ if(isset($_COOKIE['metius-settings'])) {
 	function getSettings(parameter) {
 		var settings = getCookie('metius-settings');
 		settings = settings ? JSON.parse(settings) : {
-			Music: 'Clash of Kings',
+			Music: 'Clash royale',
 			Langue: 'francais',
-			Son: 'Clash',
+			Son: 'Button Click 1',
 			isSonOn: true,
 			isMusicPaused: false,
 			Themes: 'Light1',
@@ -59,10 +62,6 @@ if(isset($_COOKIE['metius-settings'])) {
 	var music = getSettings('Music');
 	
 </script>
-
-<html lang="fr">
-<head>
-
 
 
   <title>Métius Paraiges</title>
