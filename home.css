@@ -1,7 +1,6 @@
 /* Image de fond du site */
 body {
-    background-image: url(image/fondcarreaux.jpeg);
-    background-size: auto auto;
+	background-color: #222;
 }
 /***************************************************************************/
 /****/
@@ -48,27 +47,165 @@ h6 {
 
 /*********************************************************************************/
 /****/
-/* Colonne pour article */
+/* Article 1, 2 et 3 */
 /****/
-.row {
-    color: black;
-    position: static;
+
+.Colonne {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.article {
+    padding: 3rem;
+	margin-bottom: 60px;
+	width: 100%;
+	background-color: #333;
+	color: white;
+	box-shadow: 0px 0px 60px black;
+}
+
+.Groupe {
+	display: flex;
+	justify-content: space-between;
+}
+
+.Groupe div.article {
+	width: 45%;
+	margin: 60px 0px;
+}
+
+.Titre {
+	text-align: center;
+	color: grey;
+	margin: 70px;
+	margin-left: 0px;
+}
+
+.Titre h1 {
+	font-size: 60px;
+}
+
+.TitreArticle {
+	font-size: 35px;
+	text-align: center;
+	padding: 10px;
+}
+
+.News {
+	padding: 20px;
+	border-bottom: 1px solid grey;
+}
+
+.News:last-child {
+	border: none;
+}
+
+.TitreNews {
+	font-size: 30px;
+}
+
+.Content {
+	font-size: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.ContentArticle {
+	font-size: 20px;
+	padding: 20px;
+}
+
+.Date {
+	color: lightgray;
+	font-size: 15px;
 }
 
 /*********************************************************************************/
 /****/
-/* Article 1, 2 et 3 */
+/* Sondage */
 /****/
-.article {
-    background-image: url(image/background_menu_option4.png);
-    background-size: 100% 100%;
-    background-color: none;
-    padding: 3rem;
-    margin-right: 2rem;
-    margin-bottom: 2rem;
-    border-radius: 2rem;
-    position: static;
+
+.Sondage {
+	padding: 20px;
+	border-top: 1px solid grey;
+	border-bottom: 1px solid grey;
 }
+
+.ContainerVote {
+	margin: 50px auto;
+	background-color: #444;
+	padding: 30px;
+	width: auto;
+}
+
+.Question {
+	text-align: center;
+	border-bottom: 1px solid red;
+	padding-bottom: 30px;
+}
+
+.Reponses {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 30px;
+}
+
+.Button {
+	display: flex;
+	justify-content: center;
+}
+
+.Boutton {
+	border: 1px solid black;
+	background-color: white;
+}
+
+.Boutton:hover {
+	background-color: whitesmoke;
+}
+
+div.containerFormulaire {
+	width: 50%;
+	border-radius: 5px;
+	background-color: #f2f2f2;
+	padding: 20px;
+}
+
+.Reponse {
+	display: flex;
+	justify-content: space-around;
+	padding: 20px;
+}
+
+label.resultats {
+	margin: 0;
+    font-size: auto;
+}
+
+progress#file {
+	margin: 0px 10px 0px 10px;
+	background-color: grey;
+	border: none;
+	
+}
+
+div.Resultats {
+	display: flex;
+	justify-content: space-around;
+	padding: 20px;
+}
+
+div.Resultat {
+	display: flex;
+	align-items: center;
+}
+
+p.Resultats {
+	margin: 0;
+}
+
 /*********************************************************************************/
 /****/
 /* Footer */
@@ -123,9 +260,6 @@ a:hover {
     .article {margin: 1rem;}
 }
 
-@media screen and (max-width: 1010px) {
-    .imagenone {display: none;}
-}
 @media screen and (max-width: 400px) {
     .w3-animate-zoom {animation: none;}
 }

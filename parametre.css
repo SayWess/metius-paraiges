@@ -77,7 +77,6 @@ h6 {
 .borderDiv {
 	background-color: black;
 	align-items: center;
-	border-bottom: 5px solid #069;
 	display: flex;
 	padding: 0.5rem 1.5rem;
 	align-items: center;

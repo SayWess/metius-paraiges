@@ -14,6 +14,7 @@
 	
 	$pageActive = "parametre";
 	include "Templates/navigation.php"; 
+	
 ?>
 
 <form class="js-form">
