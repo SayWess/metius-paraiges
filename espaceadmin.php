@@ -115,7 +115,6 @@ $DernierQuest = json_decode($DernierQuest, true);
 ?>
 
 <div class="ContainerVote">
-	<form>
 		<div class="titre">
 			<h1> Formulaire actuel :</h1>
 		</div>
@@ -181,9 +180,15 @@ $DernierQuest = json_decode($DernierQuest, true);
 			
 		?>
 		
-		<div class="Question">
-			<h2> <?= $Question['question'] ?> </h2>
+		<form method="post" action="formulaire.php">
+		
+		<div class="Question CroixDelete">
+			<h2 class="Quest"> <?= $Question['question'] ?> </h2> 
+			<input hidden name="QuestionADelete" value="<?= $Question['question'] ?>"> </input>
+			<button type="submit" class="Remove" name="Remove"> <i class="material-icons"> clear </i> </button>
 		</div>
+		
+		</form>
 		
 		<div class="Reponses">
 		
@@ -200,24 +205,25 @@ $DernierQuest = json_decode($DernierQuest, true);
 		
 		<?php } ?>
 		
-	
-		
-		
-		
-		
-		
-		
-	
 		
 		<div class="Button">
 			<button type="button" class="Boutton"> Confirmer </button>
 		</div>
 		
-	</form>
 </div>
 
 </div>
 
+<script> 
+
+function RemoveQuestion(question) {
+	var Questions = JSON.parse('JSON/InfoHomePage/Questionnaire/Resultats.json');
+	var QuestionsFutures = Questions.filter( index => valeur['question'] == question);
+	console.log(QuestionsFutures);
+	
+}
+
+</script>
 
 <div class="jumbotron footer">
   <p>Auteur : SayWess | Dernière modification: 2019-01-06</p>

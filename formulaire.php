@@ -24,6 +24,15 @@ if(isset($_POST['Submit'])) {
 	file_put_contents("JSON/InfoHomePage/Questionnaire/Resultats.json", json_encode($questions));
 }
 
+if(isset($_POST['Remove'])) {
+	$quest = json_decode(file_get_contents('JSON/InfoHomePage/Questionnaire/Resultats.json'), true);
+	$QuestionToDelete = array_filter($quest, function ($question) {
+			return $question['question'] == $_POST['QuestionADelete'];
+		} );
+	unset($quest[key($QuestionToDelete)]);
+	file_put_contents('JSON/InfoHomePage/Questionnaire/Resultats.json', json_encode(array_values($quest)));
+}
+
 header('location: espaceadmin.php');
 
 ?>

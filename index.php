@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 
 <?php 
+
+	$date = json_decode(file_get_contents('JSON/InfoHomePage/Questionnaire/Semaine.json') ,true);
 	
-	if(isset($_COOKIE["Vote"]) && date("D") == "Mon") {
+	if(isset($_COOKIE["Vote"]) && $date['date'] != date('W')) {
 		setcookie('Vote', "", - 1, '/');
+		$date['date'] = date('W');
+		file_put_contents('JSON/InfoHomePage/Questionnaire/Semaine.json', json_encode($date));
 	}
+	
 
 	$cssFile = "home";
 	include "Templates/head.php"; 
@@ -167,19 +172,42 @@
 		
 <?php
 
-$jNew= file_get_contents("JSON/InfoHomePage/JoueurArrive/JoueurArrive.json");
-$jNew = json_decode($jNew, true);
-
 $date = date('W|y');
 
-if(!is_null($jNew)) { ?>
+function Joueur($file) {
+
+	$newWarriors = json_decode(file_get_contents('JSON/'.$file.'.json'), true);
+	$jNew = [];
+	$jName = [];
+	$date = date('W|y');
+
+	foreach($newWarriors as $key => $value) {
+		if(key($value) == $date) {
+			foreach($value as $index => $tag) {
+				$jNew[] = $tag;
+			}
+		}
+	}
+
+	foreach($jNew as $index => $value) {
+		foreach($value as $joueur) {
+		$Profil = json_decode(file_get_contents('JSON/joueurProfil/'.$joueur.'.json'));
+		$jName[] = $Profil->name;
+		}
+	}
+	return $jName;
+}
+
+$jName = Joueur('newWarriors');
+
+if(!empty($jName)) { ?>
 		<div class="News">
 			<div class="TitreNews">
 				<p> Dites bonjours aux nouveaux, </p>
 			</div>
 	
 			<div class="Content"> 
-				<p> Bienvenue à <?php echo join(', ', $jNew[$date])." arrivé le ".key($jNew) ?>  </p>
+				<p> Bienvenue à <?php echo join(', ', $jName)." arrivé le ".$date ?>  </p>
 			</div>
 			
 		
@@ -187,9 +215,9 @@ if(!is_null($jNew)) { ?>
 		
 	<?php } 
 	
-	$jOld = json_decode(file_get_contents("JSON/InfoHomePage/JoueurParti/JoueurParti.json"), true);
+	$jOld = Joueur('oldWarriors');
 	
-	if(!is_null($jOld)) {
+	if(!empty($jOld)) {
 	
 	?>
 		
@@ -199,7 +227,7 @@ if(!is_null($jNew)) { ?>
 			</div>
 	
 			<div class="Content"> 
-				<p> Au revoir à <?php echo join(', ', $jOld[$date])." parti le ".key($jOld) ?>  </p>
+				<p> Au revoir à <?php echo join(', ', $jOld)." parti le ".$date ?>  </p>
 			</div>
 			
 		
@@ -243,25 +271,6 @@ $phrase = rand(0, $lenght - 1);
     </div>
     
 </div>
-
-
-
-
-
-<script> 
-
-	function setCookie(cname,cvalue,exdays) {
-		var d = new Date();
-		d.setTime(d.getTime() + (exdays*24*60*60*1000));
-		var expires = "expires=" + d.toGMTString();
-		document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-	}
-	
-</script>
-
-
-
-
 
 
 <div class="jumbotron footer">

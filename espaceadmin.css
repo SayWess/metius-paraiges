@@ -196,6 +196,35 @@ div.titre {
 	color: red;
 }
 
+.CroixDelete {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+button.Remove {
+	margin-left: 50px;
+	border: none;
+	background-color: white;
+	transition: .4s;
+}
+
+button.Remove:hover {
+	background-color: whitesmoke;
+}
+
+button.Remove i {
+	font-size: 50px;
+	color: red;
+	transition: .4s;
+	float: right;
+}
+
+button.Remove:hover i {
+	font-size: 55px;
+}
+
+
 /*********************************************************************************/
 /****/
 /* Footer */
