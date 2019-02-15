@@ -206,7 +206,7 @@ button.Remove {
 	margin-left: 50px;
 	border: none;
 	background-color: white;
-	transition: .4s;
+	transition: .5s;
 }
 
 button.Remove:hover {
@@ -218,10 +218,6 @@ button.Remove i {
 	color: red;
 	transition: .4s;
 	float: right;
-}
-
-button.Remove:hover i {
-	font-size: 55px;
 }
 
 
