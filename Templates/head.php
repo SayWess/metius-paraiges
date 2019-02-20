@@ -20,12 +20,7 @@ if(isset($_COOKIE['metius-settings'])) {
         setcookie('metius-settings', json_encode($cookie), time() + (365 * 86400 * 30), "/");
 }
 
-// if(isset($_COOKIE['Vote'])) {
-// 	if(date('D') == "Mon") {
-// 		setcookie('Vote', "", time() - 3600);
-// 		unset($_COOKIE['Vote']);
-// 	}
-// }
+	$Theme = $cookie['Theme'];
 
 ?>
 

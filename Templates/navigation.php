@@ -49,9 +49,6 @@
         <a class="nav-link<?= $reglement ?>" href="reglement.php" onclick="LinkSound()">Règlement</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link<?= $recrutement ?>" href="recrutement.php" onclick="LinkSound()">Recrutement</a>
-      </li>    
-      <li class="nav-item">
         <a class="nav-link<?= $admin ?>" href="<?= $LogOuAdmin ?>" onclick="LinkSound()">Espace Admin</a>
       </li>
       <li class="nav-item">

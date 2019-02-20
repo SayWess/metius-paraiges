@@ -24,7 +24,7 @@
 	include "Templates/navigation.php"; //On inclue le fichier qui contient la navigation
 ?>
 
-<div class="Colonne" style="margin-top:30px">
+<div class="Colonne">
 
 	<div class="Titre"> 
 		<h1> Metius Paraiges </h1>
@@ -79,8 +79,6 @@
 		$QuestionActive = array_filter($DernierQuest, function ($question) use ($firstOldDate) {
 			return $question['date'] === $firstOldDate;
 		} );
-		
-		$i = 0;
 		
 		foreach($QuestionActive as $index => $Question) {
 		
@@ -198,16 +196,24 @@ function Joueur($file) {
 	return $jName;
 }
 
-$jName = Joueur('newWarriors');
+$jNew = Joueur('newWarriors');
 
-if(!empty($jName)) { ?>
+if(!empty($jNew)) { ?>
 		<div class="News">
 			<div class="TitreNews">
 				<p> Dites bonjours aux nouveaux, </p>
 			</div>
 	
 			<div class="Content"> 
-				<p> Bienvenue à <?php echo join(', ', $jName)." arrivé le ".$date ?>  </p>
+				<p> Bienvenue à <?php 
+					if(count($jNew) == 2) {
+						echo join(' et ', $jNew)." arrivés le ".$date; 
+					} elseif(count($jNew) > 2) {
+						echo join(', ', $jNew)." arrivés le ".$date; 
+					} else {
+						echo join(', ', $jNew)." arrivé le ".$date;
+					}
+					?>  </p>
 			</div>
 			
 		
@@ -227,7 +233,15 @@ if(!empty($jName)) { ?>
 			</div>
 	
 			<div class="Content"> 
-				<p> Au revoir à <?php echo join(', ', $jOld)." parti le ".$date ?>  </p>
+				<p> Au revoir à <?php 
+					if(count($jOld) == 2) {
+						echo join(' et ', $jOld)." partis le ".$date; 
+					} elseif(count($jOld) > 2) {
+						echo join(', ', $jOld)." partis le ".$date; 
+					} else {
+						echo join(', ', $jOld)." parti le ".$date;
+					}
+					?>  </p>
 			</div>
 			
 		
@@ -253,21 +267,86 @@ $lenght = count($fichierP);
 $phrase = rand(0, $lenght - 1);
 
 ?>
-
 				<div>
 					<?= $fichierP[$phrase] ?>
 				</div>
 				
 			</div>
 			
-		</div>    
+		</div>   
+
+<?php
+	$newWarriors = json_decode(file_get_contents("JSON/newWarriors.json"), true);
+	
+	$jTag = [];
+	$jName = [];
+	
+	foreach($newWarriors as $key) {
+		foreach($key as $dateArrivee => $value) {
+			if(substr($dateArrivee, 0, 2) == date('W') && $dateArrivee != date('W|y')) {
+				foreach($value as $index => $valeur) {
+					$jTag[$dateArrivee][] = $valeur;
+				}
+			}
+		}
+	}
+	
+	foreach($jTag as $dateArrivee => $joueurs) {
+		foreach($joueurs as $tag) {
+			$name = json_decode(file_get_contents("JSON/joueurProfil/$tag.json"));
+			$jName[$dateArrivee][] = $name->name; 
+		}
+	}
+	
+	if(!empty($jName)) {
+		$keys = array_keys($jName);
+		$last_key = $keys[count($keys)-1];
+?>
+		<div class="News">
+			<div class="TitreNews">
+				<p> C'est l'heure des anniversaires ! </p>
+			</div>
+	
+			<div class="Content"> 
+				<p> Joyeux anniversaire d'arrivée 
+				
+				<?php foreach($jName as $index => $tags) {
+						if(is_array($tags)) {
+								if(count($tags) == 2 && $index != $last_key && count($jName) > 1) {
+									echo " à ".join(' et ', $tags)." arrivés le ".$index." et ";
+								} elseif(count($tags) == 2) {
+									echo " à ".join(' et ', $tags)." arrivés le ".$index;
+								} elseif($index != $last_key && count($jName) > 1) {
+									echo " à ".join(', ',$tags)." arrivés le ".$index." et ";
+								} else {
+									echo " à ".join(', ',$tags)." arrivés le ".$index;
+								}
+							} elseif(count($jName) > 1 && $index != $last_key) {
+								echo " à ".$tags." arrivé le ".$index." et ";
+							} else {
+								echo " à ".$tags." arrivé le ".$index;
+							}
+					} ?>  </p>
+			</div>
+			
+		</div>
+		
+<?php } /*join(', ', $jName)." arrivé le ".key($jName) */?>
 		
     </div>
     
     <div class="w3-animate-zoom article">
-		<h2>Contrat SUPERCELL</h2>
-		<h4>CONTRAT</h4>
-		<p>"This content is not affiliated with, endorsed, sponsored, or specifically approved by Supercell and Supercell is not responsible for it. For more information see Supercell's Fan Content Policy: www.supercell.com/fan-content-policy."</p>
+    
+		<div class="TitreArticle">
+			<p>Contrat SUPERCELL</p>
+		</div>
+		
+		<div class="News">
+			<div class="Content">
+				<p>"This content is not affiliated with, endorsed, sponsored, or specifically approved by Supercell and Supercell is not responsible for it. For more information see Supercell's Fan Content Policy: www.supercell.com/fan-content-	policy."</p> 
+			</div>
+		</div>
+		
     </div>
     
 </div>

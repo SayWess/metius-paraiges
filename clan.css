@@ -1,6 +1,6 @@
 /* Image de fond du site */
 body {
-    background-image: url(image/fondcarreaux.jpeg);
+    background-color: #222;
 }
 /***************************************************************************/
 /****/
@@ -47,33 +47,30 @@ h6 {
 
 /*********************************************************************************/
 /****/
-/* Colonne pour article */
-/****/
-.row {
-    color: black;
-    position: static;
-}
-
-/*********************************************************************************/
-/****/
 /* Article joueurs */
 /****/
 .containerlarge {
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
+    width: 97vw;
     margin-right: auto;
     margin-left: auto;
     margin-top: 30px;
 }
+
 .article {
-    background-color: white;
-    padding: 2rem;
     margin-bottom: 2rem;
-    border-radius: 2rem;
-    background-image: url(image/fondbois3.png);
-	background-size: 30% 50%;
-	background-repeat: repeat;
+	background-color: #333;
+}
+
+.TitreArticle {
+	padding: 35px;
+	border-bottom: 10px solid;
+	border-color: #333 #333 #CF0000;
+	color: whitesmoke;
+	background-color: black;
+}
+
+.TitreArticle p {
+	font-size: 33px;
 }
 
 /*********************************************************************************/
@@ -82,23 +79,14 @@ h6 {
 /****/
 .containerlargeclan {
     width: 90vw;
-    padding-right: 15px;
-    padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
     margin-top: 30px;
 }
 .articleclan {
-    background-color: white;
-    padding: 2rem;
+    background-color: black;
+	color: white;
     margin-bottom: 2rem;
-    border-radius: 2rem;
-    position: static;
-    background-image: url(image/fondbois3.png);
-	background-size: 30% 50%;
-	background-repeat: repeat;
-    min-height: 30vh;
-    overflow: hidden;
 }
 .imageclan {
     margin: 1rem;
@@ -120,70 +108,131 @@ h6 {
     padding-top: 0;
     margin: 0;
 }
-.typeclan {
-	text-align: left;
+
+.StatistiqueClan-Container {
+	display: flex;
+	justify-content: space-around;
+	flex-grow: 1;
+	padding: 20px;
+	background-color: #333;
+	color: whitesmoke;
+}
+
+.StatistiqueClan-DivStats {
+	background-color: #444;
+}
+
+.StatistiqueClan-Stats {
+	background-color: transparent;
+	padding: 5px;
 }
 
 /*********************************************************************************/
 /****/
 /* Tableau */
 /****/
-.hauteurmaxtableau {
-    max-height: 70vh;
-    text-align: right;
+
+@import 'https://fonts.googleapis.com/css?family=Montserrat:300,400,700';
+
+.Tableau {
+	width: auto;
+	max-height: 80vh;
+	overflow-y: scroll;
+	display: ;
 }
+
+.Tableau table {
+	margin: 1em 0;
+	width: 100%;
+	text-align: center;
+	background: #34495E;
+	color: whitesmoke;
+	border-radius: .4em;
+	border: none;
+	display: table;
+}
+
+tr {
+	border-color: lighten(#34495E, 10%);
+}
+
+th, td:before {
+	color: #dd5;
+}
+
+th, td {
+	margin: .4em 1em; 
+	padding: 8px 3.3px;
+	border-color: #34495E;
+}
+
+.ArticleJoueurContent {
+	color: whitesmoke;
+	padding: 35px;
+}
+
+.Stats-Seasons, .Stats-Combats, .Stats-Dons, .Stats-TournoisDefi {
+	display: none;
+}
+
+label {
+	color: whitesmoke;
+}
+
+#Seasons:checked ~ div table th.Stats-Seasons, #Seasons:checked ~ div table td.Stats-Seasons, #Combats:checked ~ div table th.Stats-Combats, #Combats:checked ~ div table td.Stats-Combats, #Dons:checked ~ div table th.Stats-Dons, #Dons:checked ~ div table td.Stats-Dons, #TournoisDefi:checked ~ div table th.Stats-TournoisDefi, #TournoisDefi:checked ~ div table td.Stats-TournoisDefi{
+	display: table-cell;
+}
+
+
+
+
 .text-align-gauche {
     text-align: left;
 }
-.text-align-centre {
+/*.text-align-centre {
     text-align: center;
-}
-th, td {
-  /*padding: 15px;*/
-  padding: 8px 8px;
-}
-th {
-  cursor: pointer;
-}
+}*/
+
 td a {
-    color: black;
-}
-td:hover {
-    background-color: lightgrey;
-}
-th.grey {
-    background-color: grey;
-    vertical-align: top;
+    color: whitesmoke;
 }
 
-tr:nth-child(even){background-color: #f2f2f2}
-tr {
-    background-color: white;
-    border-bottom: 1px solid #ddd;
+td:hover {
+    background-color: ;
 }
+
+th {
+    background-color: grey;
+    vertical-align: top;
+	cursor: pointer;
+}
+
 tr:hover {
-	background-color: #c0c0c0;
+	background-color: darkcyan;
 }
+
+tr:hover td {
+	border: darkcyan;
+}
+
 table thead {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 5;
-    background: #fff;
 }
-thead tr {
+
+/*thead tr {
     text-align: center;
-}
-thead tr th {
-    padding-left: 0;
-    padding-right: 0;
-}
+}*/
+
 .theadimage {
     max-width: 55px;
 }
-tbody tr:hover td:first-child {
-	background-color: green;
-}
+
+/*tbody tr:hover td:first-child {
+	background-color: darkcyan;
+}*/
 
 /*********************************************************************************/
 /****/

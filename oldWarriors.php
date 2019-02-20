@@ -28,7 +28,7 @@
 		<div class="flex">
 			<?php 
 			
-			function anniversaireJoueurClan() {
+			function oldWarriors() {
 			
 				$oldWarriors = file_get_contents("JSON/oldWarriors.json");
 				$oldWarriors = json_decode($oldWarriors, true);
@@ -117,75 +117,8 @@
 			//Fonction enfin terminée mdr
 			
 			//On echo la fonction
-			echo anniversaireJoueurClan();
+			echo oldWarriors();
 			?>
-			
-			<div  class="joueurParti">
-									<div class="Guerrier">
-										<div class="levelEtNom">
-											<h2 class="NomGuerrier"> CFD</h2>
-											<img class="level" src="image/level13.png">
-										</div>
-										<p class="TagGuerrier"> #25J5H431RT</p>
-										<p class="trophees"> 5200 <img class="tropheesImage" src="image/trophees.png"> max </p>
-										<p class="date"> Du 01|17 au 12|19</p>
-									</div>
-			</div>
-			<div  class="joueurParti">
-									<div class="Guerrier">
-										<div class="levelEtNom">
-											<h2 class="NomGuerrier"> CFD</h2>
-											<img class="level" src="image/level1.png">
-										</div>
-										<p class="TagGuerrier"> #25J5H431RT</p>
-										<p class="trophees"> 5200 <img class="tropheesImage" src="image/trophees.png"> max </p>
-										<p class="date"> Du 01|17 au 12|19</p>
-									</div>
-			</div>
-	 		<div  class="joueurParti">
-									<div class="Guerrier">
-										<div class="levelEtNom">
-											<h2 class="NomGuerrier"> CFD</h2>
-											<img class="level" src="image/level1.png">
-										</div>
-										<p class="TagGuerrier"> #25J5H431RT</p>
-										<p class="trophees"> 5200 <img class="tropheesImage" src="image/trophees.png"> max </p>
-										<p class="date"> Du 01|17 au 12|19</p>
-									</div>
-			</div>
-			<div  class="joueurParti">
-									<div class="Guerrier">
-										<div class="levelEtNom">
-											<h2 class="NomGuerrier"> CFD</h2>
-											<img class="level" src="image/level1.png">
-										</div>
-										<p class="TagGuerrier"> #25J5H431RT</p>
-										<p class="trophees"> 5200 <img class="tropheesImage" src="image/trophees.png"> max </p>
-										<p class="date"> Du 01|17 au 12|19</p>
-									</div>
-			</div>
-	 		<div  class="joueurParti">
-									<div class="Guerrier">
-										<div class="levelEtNom">
-											<h2 class="NomGuerrier"> CFD</h2>
-											<img class="level" src="image/level1.png">
-										</div>
-										<p class="TagGuerrier"> #25J5H431RT</p>
-										<p class="trophees"> 5200 <img class="tropheesImage" src="image/trophees.png"> max </p>
-										<p class="date"> Du 01|17 au 12|19</p>
-									</div>
-			</div>
-	 		<div  class="joueurParti">
-									<div class="Guerrier">
-										<div class="levelEtNom">
-											<h2 class="NomGuerrier"> CFD</h2>
-											<img class="level" src="image/level1.png">
-										</div>
-										<p class="TagGuerrier"> #25J5H431RT</p>
-										<p class="trophees"> 5200 <img class="tropheesImage" src="image/trophees.png"> max </p>
-										<p class="date"> Du 01|17 au 12|19</p>
-									</div>
-			</div>
 			
 		</div>
 		

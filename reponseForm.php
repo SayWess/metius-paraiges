@@ -6,7 +6,7 @@ $vote = [];
 
 for($i = 0; $i <= 3; $i++ ) {
 	if(isset($_POST['question-'.$i])) {
-		foreach($_POST['Reponse'.$i] as $Reponse) {
+		foreach($_POST['Reponse'.$_POST['question-'.$i]] as $Reponse) {
 			$DernierQuest[$_POST['question-'.$i]]['answers'][$Reponse]++;
 		}
 	}
